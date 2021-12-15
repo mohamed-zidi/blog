@@ -15,7 +15,7 @@ if(isset($_POST['connexion'])){
         $res = mysqli_query($db,"SELECT * FROM utilisateurs WHERE login = '".$loginconnect."' && password = '".$mdpconnect."' ");
         $result = mysqli_num_rows($res);
         $f = mysqli_fetch_all($res);
-        var_dump($f);
+        
         if($result == 1){
             session_start();
             $_SESSION['login'] = $loginconnect;
@@ -25,9 +25,13 @@ if(isset($_POST['connexion'])){
             header('location:../html/index.php');
             
         } else {
+            session_start();
+            $_SESSION['erreur'] = 'Identifiants érronés';
+            
             header('location:../html/connexion.php');
-            $affichage = 'Identifiants érronés';
+            
         }
 }
 }
+
 ?>

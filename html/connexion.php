@@ -1,5 +1,6 @@
 <?php 
 include '../traitement_php/connexion_traitement.php';
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -30,9 +31,10 @@ include '../traitement_php/connexion_traitement.php';
 </form>
 
 
-<?php if(isset($affichage)){ ?>
+<?php if(isset($_SESSION['erreur'])){ ?>
 
-   <p> <?php echo $affichage ; ?> </p>
+   <p> <?php echo $_SESSION['erreur']; ?> </p>
+
 <?php } ?>
 
 
