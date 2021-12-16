@@ -21,6 +21,7 @@ if(isset($_POST['connexion'])){
             $_SESSION['login'] = $loginconnect;
             $_SESSION['mdp'] = $mdpconnect;
             $_SESSION['id'] = $f[0][0];
+            $_SESSION['mail'] = $f[0][3];
             $_SESSION['id_droit'] = $f[0][4];
             header('location:../html/index.php');
             

@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 include '../connexion_bdd/connexion-bdd.php';
 
