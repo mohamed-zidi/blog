@@ -6,7 +6,7 @@ include '../connexion_bdd/connexion-bdd.php';
 
 $query = mysqli_query($db,"SELECT * FROM `categories`");
 $r= mysqli_fetch_all($query);
-
+var_dump($r);
 
 
 

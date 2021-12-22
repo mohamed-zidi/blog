@@ -12,7 +12,7 @@ if(isset($_POST['connexion'])){
 
     if(!empty($loginconnect) && !empty($mdpconnect)){
         $db = mysqli_connect('localhost','root','','blog');
-        $res = mysqli_query($db,"SELECT * FROM utilisateurs WHERE login = '".$loginconnect."' && password = '".$mdpconnect."' ");
+        $res = mysqli_query($db,"SELECT * FROM utilisateurs WHERE login = '".$loginconnect."' AND password = '".$mdpconnect."' ");
         $result = mysqli_num_rows($res);
         $f = mysqli_fetch_all($res);
         
@@ -24,11 +24,11 @@ if(isset($_POST['connexion'])){
             $_SESSION['mail'] = $f[0][3];
             $_SESSION['id_droit'] = $f[0][4];
             header('location:../html/index.php');
-            
+            echo 1;
         } else {
             session_start();
             $_SESSION['erreur'] = 'Identifiants érronés';
-            
+            echo 2;
             header('location:../html/connexion.php');
             
         }

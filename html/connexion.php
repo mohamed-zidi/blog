@@ -38,9 +38,14 @@ session_start();
 
     <?php if(isset($_SESSION['erreur'])){ ?>
 
-    <p> <?php echo $_SESSION['erreur']; ?> </p>
+    <p> 
+        <?php echo $_SESSION['erreur'];
+              unset($_SESSION['erreur']);
+        ?> 
+    <?php } ?>    
+    </p>
 
-    <?php } ?>
+   
     </main>
 
 </body>

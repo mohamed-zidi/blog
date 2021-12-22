@@ -21,6 +21,9 @@ if(isset($_POST['deconnexion'])){
                 <ul>
                     <a class="aicon" href="#.php">Ecrire un article</a>
                 </ul>
+                <ul>
+                <a class="aicon" href="article-commentaire.php">Voir un artcile</a>
+                </ul>
             </div>
             <div>
                 <ul>
@@ -51,6 +54,9 @@ if(isset($_POST['deconnexion'])){
                 <ul>
                     <a class="aicon" href="#.php">Articles</a>
                 </ul>
+                <ul>
+                <a class="aicon" href="article-commentaire.php">Voir un artcile</a>
+            </ul>
             </div>
             <div>
                 <ul>
@@ -83,6 +89,9 @@ if(isset($_POST['deconnexion'])){
             </ul>
             <ul>
                 <a class="aicon" href="#.php">Ecrire un article</a>
+            </ul>
+            <ul>
+                <a class="aicon" href="article-commentaire.php">Voir un artcile</a>
             </ul>
         </div>
         <div>
@@ -136,7 +145,7 @@ if(isset($_POST['deconnexion'])){
             </div>
         </nav>
         <div>
-            <img class="baniere" src="https://zupimages.net/up/21/50/fhxt.png" alt="" />
+            <!-- <img class="baniere" src="https://zupimages.net/up/21/50/fhxt.png" alt="" /> -->
         </div>
     <?php } ?>
 </header>

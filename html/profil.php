@@ -1,6 +1,6 @@
 <?php
 include '../traitement_php/profil_traitment.php';
-echo $_SESSION['mail'];
+
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +60,10 @@ echo $_SESSION['mail'];
 
         <?php if(isset($_SESSION['affichage'])){ ?>
 
-        <p><?php echo $_SESSION['affichage']; ?></p>
+        <p> <?php echo $_SESSION['affichage']; 
+                  unset($_SESSION['affichage']);  
+            ?>
+        </p>
 
         <?php } ?>
 
