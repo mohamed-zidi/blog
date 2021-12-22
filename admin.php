@@ -26,7 +26,30 @@ $REQ = $bdd->query('SELECT * FROM droits');
     <main>
         <div>
             <h1 class="tarr"> BIENVENUE SUR VOTRE TABLEAU DE BORD ADMIN</h1>
-        </div>
+        </div>  <section>
+<h2 class="h2admin">Droits</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="th">ID</th>
+                    <th class="th">NOM</th>
+                    <th class="th">MODIFIER</th>
+                    <th class="th">SUPPRIMER</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                while ($rows = $REQ->fetch()) {
+                    echo "<tr><th>$rows[id]</th>";
+                    echo "<th>$rows[nom]</th>";
+                    echo "<th><a href=\"modifierdroits.php?id=$rows[id]\">modifier</a></th>";
+                    echo "<th><a href=\"supprimerdroits.php?id=$rows[id]\">supprimer</a></th></tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+        <button class="button" type="submit" name="connexion"><a href="creerdroits.php?id=<?php $rows['id'];?>\">Créer</a></button>
+    </section>
         <section>
 <h2 class="h2admin">Utilisateurs</h2>
         <table class="table">
@@ -37,7 +60,7 @@ $REQ = $bdd->query('SELECT * FROM droits');
                     <th class="th">PASSWORD</th>
                     <th class="th">EMAIL</th>
                     <th class="th">ID_DROIT</th>
-                    <th class="th">MODIFIER</th>
+                    <th class="th">MODIFIER DROIT</th>
                     <th class="th">SUPPRIMER</th>
                 </tr>
             </thead>
@@ -49,12 +72,13 @@ $REQ = $bdd->query('SELECT * FROM droits');
                     echo "<th>$rows[password]</th>";
                     echo "<th>$rows[email]</th>";
                     echo "<th>$rows[id_droits]</th>";
-                    echo "<th><a href=\"modifer.php?id=$rows[id]\">modifier</a></th>";
-                    echo "<th><a href=\"suppimer.php?id=$rows[id]\">supprimer</a></th></tr>";
+                    echo "<th><a href=\"modifieruser.php?id=$rows[id]\">modifier</a></th>";
+                    echo "<th><a href=\"supprimeruser.php?id=$rows[id]\">supprimer</a></th></tr>";
                 }
                 ?>
             </tbody>
         </table>
+        <button class="button" type="submit" name="connexion"><a href="creeruser.php?id=<?php $rows['id'];?>\">Créer</a></button>
     </section>
     <section>
 <h2 class="h2admin">Categories</h2>
@@ -63,7 +87,6 @@ $REQ = $bdd->query('SELECT * FROM droits');
                 <tr>
                     <th class="th">ID</th>
                     <th class="th">NOM</th>
-                    <th class="th">CREER</th>
                     <th class="th">MODIFIER</th>
                     <th class="th">SUPPRIMER</th>
                 </tr>
@@ -73,13 +96,13 @@ $REQ = $bdd->query('SELECT * FROM droits');
                 while ($rows = $Req->fetch()) {
                     echo "<tr><th>$rows[id]</th>";
                     echo "<th>$rows[nom]</th>";
-                    echo "<th><a href=\"créerprofil.php?id=$rows[id]\">créer</a></th>";
-                    echo "<th><a href=\"modifierprofil.php?id=$rows[id]\">modifier</a></th>";
-                    echo "<th><a href=\"supprimerprofil.php?id=$rows[id]\">supprimer</a></th></tr>";
+                    echo "<th><a href=\"modifiercategorie.php?id=$rows[id]\">modifier</a></th>";
+                    echo "<th><a href=\"supprimercategorie.php?id=$rows[id]\">supprimer</a></th></tr>";
                 }
                 ?>
             </tbody>
         </table>
+        <button class="button" type="submit" name="connexion"><a href="creercategorie.php?id=<?php $rows['id'];?>\">Créer</a></button>
     </section>
         <section>
 <h2 class="h2admin">Articles</h2>
@@ -91,7 +114,6 @@ $REQ = $bdd->query('SELECT * FROM droits');
                     <th class="th">ID_UTILISATEUR</th>
                     <th class="th">ID_CATEGORIE</th>
                     <th class="th">DATE</th>
-                    <th class="th">CREER</th>
                     <th class="th">MODIFIER</th>
                     <th class="th">SUPPRIMER</th>
                 </tr>
@@ -104,13 +126,13 @@ $REQ = $bdd->query('SELECT * FROM droits');
                     echo "<th>$rows[id_utilisateur]</th>";
                     echo "<th>$rows[id_categorie]</th>";
                     echo "<th>$rows[date]</th>";
-                    echo "<th><a href=\"créerprofil.php?id=$rows[id]\">créer</a></th>";
                     echo "<th><a href=\"modifierprofil.php?id=$rows[id]\">modifier</a></th>";
                     echo "<th><a href=\"supprimerprofil.php?id=$rows[id]\">supprimer</a></th></tr>";
                 }
                 ?>
             </tbody>
         </table>
+        <button class="button" type="submit" name="connexion"><a href="">Créer</a></button>
     </section>
         <section>
 <h2 class="h2admin">Commentaires</h2>
@@ -122,7 +144,6 @@ $REQ = $bdd->query('SELECT * FROM droits');
                     <th class="th">ID_ARTICLE</th>
                     <th class="th">ID_UTILISATEUR</th>
                     <th class="th">DATE</th>
-                    <th class="th">CREER</th>
                     <th class="th">MODIFIER</th>
                     <th class="th">SUPPRIMER</th>
                 </tr>
@@ -135,39 +156,15 @@ $REQ = $bdd->query('SELECT * FROM droits');
                     echo "<th>$rows[id_article]</th>";
                     echo "<th>$rows[id_utilisateur]</th>";
                     echo "<th>$rows[date]</th>";
-                    echo "<th><a href=\"créerprofil.php?id=$rows[id]\">créer</a></th>";
                     echo "<th><a href=\"modifier.php?id=$rows[id]\">modifier</a></th>";
                     echo "<th><a href=\"supprimerprofil.php?id=$rows[id]\">supprimer</a></th></tr>";
                 }
                 ?>
             </tbody>
         </table>
+        <button class="button" type="submit" name="connexion"><a href="">Créer</a></button>
     </section>
-    <section>
-<h2 class="h2admin">Droits</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th class="th">ID</th>
-                    <th class="th">NOM</th>
-                    <th class="th">CREER</th>
-                    <th class="th">MODIFIER</th>
-                    <th class="th">SUPPRIMER</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                while ($rows = $REQ->fetch()) {
-                    echo "<tr><th>$rows[id]</th>";
-                    echo "<th>$rows[nom]</th>";
-                    echo "<th><a href=\"créerprofil.php?id=$rows[id]\">créer</a></th>";
-                    echo "<th><a href=\"modifierprofil.php?id=$rows[id]\">modifier</a></th>";
-                    echo "<th><a href=\"supprimerprofil.php?id=$rows[id]\">supprimer</a></th></tr>";
-                }
-                ?>
-            </tbody>
-        </table>
-    </section>
+  
     </main>
     <div class="haut-de-page">
         <a href="#"><img src="https://zupimages.net/up/21/41/nngc.png"></a>

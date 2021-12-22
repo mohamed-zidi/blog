@@ -169,7 +169,7 @@ button[type="submit"]:hover {
 }
 
 button[type="submit"] {
-  background-color: rgb(241, 200, 150);
+  background-color: rgb(195, 195, 195);
   color: white;
   padding: 8px;
   border: none;
