@@ -33,7 +33,6 @@ $REQ = $bdd->query('SELECT * FROM droits');
                 <tr>
                     <th class="th">ID</th>
                     <th class="th">NOM</th>
-                    <th class="th">MODIFIER</th>
                     <th class="th">SUPPRIMER</th>
                 </tr>
             </thead>
@@ -42,7 +41,6 @@ $REQ = $bdd->query('SELECT * FROM droits');
                 while ($rows = $REQ->fetch()) {
                     echo "<tr><th>$rows[id]</th>";
                     echo "<th>$rows[nom]</th>";
-                    echo "<th><a href=\"modifierdroits.php?id=$rows[id]\">modifier</a></th>";
                     echo "<th><a href=\"supprimerdroits.php?id=$rows[id]\">supprimer</a></th></tr>";
                 }
                 ?>
@@ -126,13 +124,13 @@ $REQ = $bdd->query('SELECT * FROM droits');
                     echo "<th>$rows[id_utilisateur]</th>";
                     echo "<th>$rows[id_categorie]</th>";
                     echo "<th>$rows[date]</th>";
-                    echo "<th><a href=\"modifierprofil.php?id=$rows[id]\">modifier</a></th>";
-                    echo "<th><a href=\"supprimerprofil.php?id=$rows[id]\">supprimer</a></th></tr>";
+                    echo "<th><a href=\"modifierarticles.php?id=$rows[id]\">modifier</a></th>";
+                    echo "<th><a href=\"supprimerarticles.php?id=$rows[id]\">supprimer</a></th></tr>";
                 }
                 ?>
             </tbody>
         </table>
-        <button class="button" type="submit" name="connexion"><a href="">Créer</a></button>
+        <button class="button" type="submit" name="connexion"><a href="creerarticles.php?id=<?php $rows['id'];?>\">Créer</a></button>
     </section>
         <section>
 <h2 class="h2admin">Commentaires</h2>
@@ -144,7 +142,6 @@ $REQ = $bdd->query('SELECT * FROM droits');
                     <th class="th">ID_ARTICLE</th>
                     <th class="th">ID_UTILISATEUR</th>
                     <th class="th">DATE</th>
-                    <th class="th">MODIFIER</th>
                     <th class="th">SUPPRIMER</th>
                 </tr>
             </thead>
@@ -156,13 +153,12 @@ $REQ = $bdd->query('SELECT * FROM droits');
                     echo "<th>$rows[id_article]</th>";
                     echo "<th>$rows[id_utilisateur]</th>";
                     echo "<th>$rows[date]</th>";
-                    echo "<th><a href=\"modifier.php?id=$rows[id]\">modifier</a></th>";
-                    echo "<th><a href=\"supprimerprofil.php?id=$rows[id]\">supprimer</a></th></tr>";
+                    echo "<th><a href=\"supprimercommentaires.php?id=$rows[id]\">supprimer</a></th></tr>";
                 }
                 ?>
             </tbody>
         </table>
-        <button class="button" type="submit" name="connexion"><a href="">Créer</a></button>
+        <button class="button" type="submit" name="connexion"><a href="creercommentaires.php?id=<?php $rows['id'];?>\">Créer</a></button>
     </section>
   
     </main>

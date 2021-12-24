@@ -14,7 +14,7 @@
     <main>
         <section>
             <div>
-                <p  class="p">le blog culinaire pour les gourmands et les amoureux de la cuisine Francaise </p>
+                <p class="p">le blog culinaire pour les gourmands et les amoureux de la cuisine Francaise </p>
             </div>
         </section>
     </main>
