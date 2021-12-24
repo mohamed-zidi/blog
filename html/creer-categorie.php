@@ -1,6 +1,6 @@
 <?php
 
-include '../traitement_php/creer-article_traitement.php';
+include '../traitement_php/creer-categorie_traitement.php';
 
 ?>
 <!DOCTYPE html>
@@ -19,22 +19,15 @@ include '../traitement_php/creer-article_traitement.php';
                 <table class="form-input">
                     <tr>
                         <td>
-                            <h1 class="h_1">Créer de nouveaux articles</h1>
-                            <label for="categorie">Choisir la catégorie correspondante:</label>
-                            <select name="categorie" id="categorie">
-                                <?php foreach ($data as $categorie) { ?>
-
-                                    <option value="<?php echo $categorie['id']; ?>"> <?php echo $categorie['nom']; ?> </option>
-
-                                <?php
-                                } ?>
-                            </select>
+                            <h1 class="h_1">Créer une nouvelle categorie</h1>
+                            <label>Nouvelle categorie</label>
+                            <input type="text" name="categorie" placeholder="Entrer un identifiant" required>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                        <label for="newarticle">Ecrire un article:</label>
-                        <input type="texterea" name="newarticle" id="newarticle">
+                            <label>Confirmer nouvelle categorie</label>
+                            <input type="password" name="categorie2" placeholder="Entrer un mot de passe" required>
                         </td>
                     </tr>
                     <tr>

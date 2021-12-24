@@ -1,26 +1,6 @@
 <?php
-session_start();
-if (isset($_SESSION['login'])) {
 
-    $bdd = new PDO('mysql:host=localhost;dbname=blog', 'root', '');
-
-    if (isset($_POST['modifier'])) {
-
-    $categorie = $_POST['categorie'];
-    $categorie2 = $_POST['categorie2'];
-
-    if ($categorie ==  $categorie2) {
-
-
-            $userid = $_GET['id'];
-            var_dump($_GET['id']);
-
-            $req = $bdd->query("UPDATE categories SET nom = '$categorie2' WHERE id = '$userid'");
-            $req->execute(array());
-            header("Location: admin.php");
-        }
-    }
-}
+include '../traitement_php/modifier-categorie_traitement.php';
 
 ?>
 <!DOCTYPE html>
@@ -30,6 +10,7 @@ if (isset($_SESSION['login'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/blog.css" />
     <title>Document</title>
 </head>
 

@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="blog.css" />
+    <link rel="stylesheet" href="css/blog.css" />
     <title>Blog Cuisinella</title>
 </head>
 
 <body>
-<?php include("headerblog.php"); ?>
+    <?php include("header/header.php"); ?>
     <main>
         <section>
             <div>
@@ -21,7 +21,7 @@
     <div class="haut-de-page">
         <a href="#"><img src="https://zupimages.net/up/21/41/nngc.png"></a>
     </div>
-    <?php include("footerblog.php"); ?>
+    <?php include("footer/footer.php"); ?>
 </body>
 
 </html>

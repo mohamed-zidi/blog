@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$bdd = new PDO('mysql:host=localhost;dbname=blog', 'root', '');
+include '../connexion_bdd/connexion-bdd.php';
 
 if (isset($_SESSION['login'])) {
 
@@ -12,7 +12,7 @@ if (isset($_SESSION['login'])) {
     $req->execute(array($userid));
     if($req){
     echo "La categorie a bien été supprimer" ;
-    header("Location: admin.php");
+    header("Location: ../html/admin.php");
     exit();
 }
 }

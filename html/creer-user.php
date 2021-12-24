@@ -1,58 +1,6 @@
 <?php
 
-session_start();
-
-$bdd = new PDO('mysql:host=localhost;dbname=blog', 'root', '');
-$checke = $bdd->prepare("SELECT * FROM `droits`");
-$checke->execute(array());
-$row = $checke->rowCount();
-$data = $checke->fetchAll(PDO::FETCH_ASSOC);
-var_dump($data);
-
-if (isset($_POST['inscription'])) {
-
-    if (!empty($_POST['login']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['passwordverify'])) {
-
-        // Création de variable pour chaque données avec sécu
-        $login =  htmlspecialchars($_POST['login']);
-        $prenom = htmlspecialchars($_POST['email']);
-        $password = htmlspecialchars($_POST['password']);
-        $passwordverify =  htmlspecialchars($_POST['passwordverify']);
-        $id_droits = $_POST['id_droits'];
-
-
-        $userid = $_GET['id'];
-
-        $check = $bdd->prepare("SELECT * FROM `utilisateurs` WHERE login = '$login'");
-        $check->execute(array($login));
-        $rows = $check->rowCount();
-
-
-        if ($rows == 0) {
-            if ($password ==  $passwordverify) {
-
-                $passwordhash = password_hash($password, PASSWORD_BCRYPT);
-
-                // On insère dans la base de données
-                $insert = $bdd->prepare("INSERT INTO `utilisateurs` (`login`, `password`,`email`, `id_droits`) VALUES ('$login','$passwordhash','$email','$id_droits')");
-                $insert->execute(array(
-                    'login' => $login,
-                    'password' => $passwordhash,
-                    'email' => $email,
-                    'id_droits' => $id_droits,
-                ));
-                // On redirige avec le message de succès
-                echo ("Votre ajout a bien été envoyé.");
-                header('Location:admin.php');
-                die();
-            } else {
-                echo ("Votre ajout n'a pue etre effectuer veuillez réessayer.");
-                header('Location: creeruser.php');
-                die();
-            }
-        }
-    }
-}
+include '../traitement_php/creer-user_traitement.php';
 
 ?>
 <!DOCTYPE html>
@@ -61,7 +9,7 @@ if (isset($_POST['inscription'])) {
 <head>
     <title> Page inscription </title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="livre-or.css" />
+    <link rel="stylesheet" href="../css/blog.css" />
 </head>
 
 <body id="bodyform">
@@ -99,8 +47,8 @@ if (isset($_POST['inscription'])) {
                         <td>
                             <label>Quel droit attribuer a l'utilisateur </label>
                             <select name="id_droits" id="id_droits">
-                               
-                                <? foreach ($data as $key => $cate)  { ?>
+
+                                <? foreach ($data as $key => $cate) { ?>
 
                                     <option value="<? echo $cate['0']; ?>"> <? echo $cate['nom']; ?> </option>
                                     <option value="<? echo $cate['1']; ?>"> <? echo $cate['nom']; ?> </option>

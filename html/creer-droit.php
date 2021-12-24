@@ -1,40 +1,7 @@
 <?php
-session_start();
-$bdd = new PDO('mysql:host=localhost;dbname=blog', 'root', '');
 
-if (isset($_POST['creer'])) {
-    if (!empty($_POST['droit']) && !empty($_POST['droit2'])) {
+include '../traitement_php/creer-droit_traitement.php';
 
-
-        // Création de variable pour chaque données avec sécu
-        $droit = htmlspecialchars($_POST['droit']);;
-        $droit2 = htmlspecialchars($_POST['droit2']);
-
-        $userid = $_GET['id'];
-
-        $check = $bdd->prepare("SELECT id FROM `droits` WHERE id = $droit");
-        $check->execute();
-        $rows = $check->rowCount();
-        var_dump($rows);
-
-        if ($rows == 0) {
-            // On insère dans la base de données
-            $insert = $bdd->prepare("INSERT INTO `droits` (`id`,`nom`) VALUES ('$droit','$droit2')");
-            $insert->execute(array(
-                'droit'    => $droit,
-                'droit2' => $droit2,
-            ));
-            // On redirige avec le message de succès
-            echo ("Votre ajout a bien été envoyé.");
-            header('Location:admin.php');
-            die();
-        } else {
-            echo ("Votre ajout n'a pue etre effectuer veuillez réessayer.");
-            header('Location: creer.php');
-            die();
-        }
-    }
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,7 +9,7 @@ if (isset($_POST['creer'])) {
 <head>
     <title> Page inscription </title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="livre-or.css" />
+    <link rel="stylesheet" href="../css/blog.css" />
 </head>
 
 <body id="bodyform">
