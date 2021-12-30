@@ -28,7 +28,7 @@ if(isset($_POST['deconnexion'])){
             <div>
                 <ul>
                     <input type="search" placeholder="search" aria-label="search" required>
-                    <button type="submit">Rechercher</button>
+                    <input type="submit" value="Rechercher">
                 </ul>
             </div>
             <div class="header conin">

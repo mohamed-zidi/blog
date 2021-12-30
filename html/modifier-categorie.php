@@ -16,11 +16,11 @@ include '../traitement_php/modifier-categorie_traitement.php';
 
 <body>
 
-    <main>
+    <main id="formcenter">
         <div align="center">
             <div>
-                <h1 class="h1-">Vous etes sur le point de modifier la categorie <? echo "$userid"; ?></h1>
                 <form class="form" method="POST">
+                    <h1 class="h_1">Modifier la categorie </h1>
                     <table class="form-inpute">
                         <tr>
                         <tr>
@@ -37,13 +37,16 @@ include '../traitement_php/modifier-categorie_traitement.php';
                         </tr>
                         <tr>
                             <td align="center">
-                                <button class="button" type="submit" name="modifier">Modifier</button>
+                                <input type="submit" value="modifier" name="modifier">
                             </td>
                         </tr>
                     </table>
                 </form>
             </div>
     </main>
+
+    <p class="copy">Copyright©2021 Cuisinella. Tous droits réservés.</p>
+
 </body>
 
 </html>

@@ -16,14 +16,14 @@ include '../traitement_php/modifier-user_traitement.php';
 
 <body>
 
-    <main>
+    <main id="formcenter">
         <div align="center">
             <div>
-                <h1 class="h1-">Vous etes sur le point de modifier la categorie <? echo "$userid"; ?></h1>
                 <form class="form" method="POST">
+                    <h1 class="h_1">Modifier le droit<br> de l'utilisateur</h1>
                     <table class="form-inpute">
                         <td>
-                            <label>Id_droits</label>
+                            <label>Id_droits</label><br>
                             <select name="droit">
                                 <option value="">--Please choose an option--</option>
                                 <?php foreach ($data as $droit) { ?>
@@ -37,19 +37,22 @@ include '../traitement_php/modifier-user_traitement.php';
                         </td>
                         <tr>
                             <td>
-                                <label>Confirmer votre action </label>
+                                <label>Tapez entièrement le droit  </label>
                                 <input type="text" name="droit2" id="droit2" required />
                             </td>
                         </tr>
                         <tr>
                             <td align="center">
-                                <button class="button" type="submit" name="modifier">Modifier</button>
+                                <input type="submit" value="modifier" name="modifier">
                             </td>
                         </tr>
                     </table>
                 </form>
             </div>
     </main>
+
+    <p class="copy">Copyright©2021 Cuisinella. Tous droits réservés.</p>
+
 </body>
 
 </html>

@@ -12,14 +12,14 @@ include '../traitement_php/creer-commentaire_traitement.php';
     <link rel="stylesheet" href="../css/blog.css" />
 </head>
 
-<body id="bodyform">
-    <main>
+<body>
+    <main id="formcenter">
         <div align="center">
             <form method="POST">
                 <table class="form-input">
                     <tr>
                         <td>
-                            <h1 class="h_1">Créer de nouveaux articles</h1>
+                            <h1 class="h_1">Ajouter un commentaire</h1>
                             <label for="article">Choisir la catégorie correspondante:</label>
                             <select name="article" id="article">
                                 <?php foreach ($data as $article) { ?>
@@ -39,19 +39,16 @@ include '../traitement_php/creer-commentaire_traitement.php';
                     </tr>
                     <tr>
                         <td align="center">
-                            <button class="button" type="submit" name="creer">Créer</button>
+                            <input type="submit" value="Creer" name="creer">
                         </td>
                     </tr>
                 </table>
             </form>
         </div>
     </main>
-    <footer class="footeur">
-        <div class="footer footter">
-            <div>
-                <p class="foot copyrighte copy">Copyright©2021 Cuisinella. Tous droits réservés.</p>
-            </div>
-    </footer>
+
+        <p class="copy">Copyright©2021 Cuisinella. Tous droits réservés.</p>
+
 </body>
 
 </html>

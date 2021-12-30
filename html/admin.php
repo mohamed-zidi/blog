@@ -28,7 +28,7 @@ $REQ = $bdd->query('SELECT * FROM droits');
 
 <body>
     <?php include("../header/header.php"); ?>
-    <main>
+    <main align="center">
         <div>
             <h1 class="tarr"> BIENVENUE SUR VOTRE TABLEAU DE BORD ADMIN</h1>
         </div>  <section>

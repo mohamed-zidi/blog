@@ -7,7 +7,7 @@
   padding-bottom: 2%;
   padding-top: 1%;
   text-align: center;
-  background-color: rgb(77, 58, 58);
+  background-color: #143c55;
   color: white;
 }
 
@@ -18,7 +18,7 @@
 nav {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(77, 58, 58);
+  background-color: #143c55;
   padding: 1%;
 }
 
@@ -83,62 +83,32 @@ li {
 /* css du footer*/
 .haut-de-page {
   bottom: 10px;
-  padding-top: 5%;
-  position: relative;
-  left: 70%;
-}
-
-footer {
-  background-color: rgb(47, 46, 46);
+  padding: 5% 0% 0% 95%;
 }
 
 .footer {
   padding-top: 5%;
   padding-bottom: 4%;
-}
-.footter {
-  padding-bottom: 1%;
-}
-
-.foot {
-  display: flex;
-  justify-content: space-around;
-}
-
-.fot {
-  text-align: center;
-  padding-bottom: 4%;
-}
-
-.fote {
-  padding-left: 4%;
-  padding-bottom: 4%;
-}
-
-.footeur {
-  background-color: #90a7b5;
-}
-
-.copyright {
-  padding-top: 6%;
-  color: aliceblue;
+  background-color: #143c55;
 }
 
 .copy {
-  padding-left: 4%;
-  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  padding-top: 4%;
 }
 
-.haut-de-page {
-  bottom: 10px;
-  right: -100px;
-  position: relative;
-  left: 95%;
-  width: 0px;
+.foot{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5%;
+}
+
+.footeur {
+  background-color: #143c55;
 }
 
 .Gtitree {
-  padding-bottom: 6%;
   text-align: center;
   color: white;
 }
@@ -169,11 +139,53 @@ button[type="submit"]:hover {
 }
 
 button[type="submit"] {
-  background-color: rgb(195, 195, 195);
+  background-color: rgb(241, 200, 150);
   color: white;
   padding: 8px;
   border: none;
   cursor: pointer;
+}
+
+#formcenter{
+  display: flex;
+  justify-content: center;
+  padding-top: 10%;
+}
+
+form {
+  background-color: #90a7b5;
+  border: 2px solid;
+  border-radius: 5%;
+  padding: 4%;
+  background-color: whitesmoke;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"]{
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: none;
+  box-sizing: border-box;
+  border-bottom: 1px solid;
+  background-color: #90a7b5;
+  outline: 0;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: rgb(73 101 112);
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 80%;
+}
+
+input[type="submit"]:hover{
+  background-color: rgb(28, 71, 88);
 }
 
 /* css admin */
@@ -189,7 +201,7 @@ button[type="submit"] {
 
 .table {
   border-collapse: collapse;
-  margin: 5% 22%;
+  margin: 5%;
 }
 
 th {
@@ -202,3 +214,54 @@ th {
   color: rgb(241, 200, 150);
   font-size: 150%;
 }
+
+/* css formulaire */
+
+#formcenter{
+  display: flex;
+  justify-content: center;
+  padding-top: 10%;
+}
+
+form {
+  background-color: #90a7b5;
+  border: 2px solid;
+  border-radius: 5%;
+  padding: 4%;
+  background-color: whitesmoke;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"]{
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: none;
+  box-sizing: border-box;
+  border-bottom: 1px solid;
+  background-color: #90a7b5;
+  outline: 0;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: rgb(73 101 112);
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 80%;
+}
+
+input[type="submit"]:hover{
+  background-color: rgb(28, 71, 88);
+}
+
+.h_1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 15%;
+ }
