@@ -39,7 +39,7 @@ include '../traitement_php/creer-article_traitement.php';
                     </tr>
                     <tr>
                         <td align="center">
-                        <input type="submit" value="Creer" name="creer">
+                        <input class="input" type="submit" value="Creer" name="creer">
                         </td>
                     </tr>
                 </table>

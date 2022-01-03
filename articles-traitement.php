@@ -1,16 +1,16 @@
 <?php
 // session_start();
-include '../connexion_bdd/connexion-bdd.php';
+include '../blog/connexion_bdd/connexion-bdd.php';
 //  $db = new PDO('mysql:host=localhost;dbname=blog','root','');
 
 $perPage = 5;
-$req = $db->query('SELECT COUNT(*) AS total FROM articles');
+$req = $bdd->query('SELECT COUNT(*) AS total FROM articles');
 $result = $req->fetch();
 $total = $result['total'];
 
 $nbPage = ceil($total/$perPage);
 
-$reqarticles = $db->query("SELECT article FROM articles ORDER BY id DESC ");
+$reqarticles = $bdd->query("SELECT article FROM articles ORDER BY id DESC ");
 $reqarticles->execute();
 // $reqarticles->fetchAll() ;
 

@@ -5,4 +5,7 @@ try {
     // En cas d'erreur, on affiche un message et on arrête tout
     die('Erreur : ' . $e->getMessage());
 }
+
+$db = mysqli_connect('localhost','root','','blog');
+
 ?>

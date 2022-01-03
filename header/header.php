@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['deconnexion'])){
+if (isset($_POST['deconnexion'])) {
     session_destroy();
     header('location:../html/connexion.php');
 }
@@ -22,7 +22,7 @@ if(isset($_POST['deconnexion'])){
                     <a class="aicon" href="#.php">Ecrire un article</a>
                 </ul>
                 <ul>
-                <a class="aicon" href="article-commentaire.php">Voir un article</a>
+                    <a class="aicon" href="article-commentaire.php">Voir un article</a>
                 </ul>
             </div>
             <div>
@@ -35,9 +35,9 @@ if(isset($_POST['deconnexion'])){
                 <ul>
                     <a class="aicon" href="#">Lien github</a>
                 </ul>
-                <ul> 
+                <ul>
                     <form action="" method="post">
-                    <input type="submit" value="deconnexion"  name="deconnexion"> 
+                        <button type="submit" value="deconnexion" name="deconnexion"></button>
                     </form>
                 </ul>
             </div>
@@ -47,7 +47,7 @@ if(isset($_POST['deconnexion'])){
             <h1 class=" Gtitre">BLOG CUISINELLA</h1>
         </div>
         <nav>
-            <div>
+            <div class="header">
                 <ul>
                     <a class="aicon" href="index.php">Accueil</a>
                 </ul>
@@ -55,8 +55,8 @@ if(isset($_POST['deconnexion'])){
                     <a class="aicon" href="#.php">Articles</a>
                 </ul>
                 <ul>
-                <a class="aicon" href="article-commentaire.php">Voir un article</a>
-            </ul>
+                    <a class="aicon" href="article-commentaire.php">Voir un article</a>
+                </ul>
             </div>
             <div>
                 <ul>
@@ -64,53 +64,53 @@ if(isset($_POST['deconnexion'])){
                     <button type="submit">Rechercher</button>
                 </ul>
             </div>
-            <div class="conin">
+            <div class="header conin">
                 <ul>
                     <a class="aicon" href="profil.php">Profil</a>
                 </ul>
                 <ul>
                     <form action="" method="post">
-                        <input type="submit" value="deconnexion"  name="deconnexion">
-                    </form>   
+                        <input type="submit" value="deconnexion" name="deconnexion">
+                    </form>
                 </ul>
             </div>
         </nav>
-    <?php } elseif(isset($_SESSION['id_droit']) && isset($_SESSION['id_droit']) == '42') { ?>
+    <?php } elseif (isset($_SESSION['id_droit']) && isset($_SESSION['id_droit']) == '42') { ?>
         <div>
-        <h1 class=" Gtitre">BLOG CUISINELLA</h1>
-    </div>
-    <nav>
-        <div>
-            <ul>
-                <a class="aicon" href="index.php">Accueil</a>
-            </ul>
-            <ul>
-                <a class="aicon" href="#.php">Articles</a>
-            </ul>
-            <ul>
-                <a class="aicon" href="#.php">Ecrire un article</a>
-            </ul>
-            <ul>
-                <a class="aicon" href="article-commentaire.php">Voir un article</a>
-            </ul>
+            <h1 class=" Gtitre">BLOG CUISINELLA</h1>
         </div>
-        <div>
-            <ul>
-                <input type="search" placeholder="search" aria-label="search" required>
-                <button type="submit">Rechercher</button>
-            </ul>
-        </div>
-        <div class="conin">
-            <ul>
-                <a class="aicon" href="profil.php">Profil</a>
-            </ul>
-            <ul>
-                <form action="" method="post">
-                    <input type="submit" value="deconnexion"  name="deconnexion">
-                </form>    
-            </ul>
-        </div>
-    </nav> 
+        <nav>
+            <div class="header">
+                <ul>
+                    <a class="aicon" href="index.php">Accueil</a>
+                </ul>
+                <ul>
+                    <a class="aicon" href="#.php">Articles</a>
+                </ul>
+                <ul>
+                    <a class="aicon" href="#.php">Ecrire un article</a>
+                </ul>
+                <ul>
+                    <a class="aicon" href="article-commentaire.php">Voir un article</a>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <input type="search" placeholder="search" aria-label="search" required>
+                    <button type="submit">Rechercher</button>
+                </ul>
+            </div>
+            <div class="header conin">
+                <ul>
+                    <a class="aicon" href="profil.php">Profil</a>
+                </ul>
+                <ul>
+                    <form action="" method="post">
+                        <input type="submit" value="deconnexion" name="deconnexion">
+                    </form>
+                </ul>
+            </div>
+        </nav>
     <?php } else { ?>
         <div>
             <h1 class=" Gtitre">BLOG CUISINELLA</h1>
@@ -137,10 +137,10 @@ if(isset($_POST['deconnexion'])){
             </div>
             <div class="header conin">
                 <ul>
-                    <a class="aicon" href="connexion.php">Connexion</a>
+                    <a class="aicon" href="../blog/html/connexion.php">Connexion</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="inscription.php">Inscription</a>
+                    <a class="aicon" href="../blog/html/inscription.php">Inscription</a>
                 </ul>
             </div>
         </nav>
