@@ -19,7 +19,7 @@ include '../traitement_php/modifier-user_traitement.php';
     <main id="formcenter">
         <div align="center">
             <div>
-                <form class="form" method="POST">
+                <form class="form" class="form" method="POST">
                     <h1 class="h_1">Modifier le droit<br> de l'utilisateur</h1>
                     <table class="form-inpute">
                         <td>

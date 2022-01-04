@@ -46,7 +46,7 @@ if (isset($_GET['appliquer'])) {
      
     </header>
 
-    <form method="GET">
+    <form class="select-categorie" method="GET">
         <label>Trier les articles par catégorie :</label>
         <select name="categorie" id="categorie">
             <?php foreach ($data as $categorie) { ?>
@@ -70,13 +70,13 @@ if (isset($_GET['appliquer'])) {
             <div class="articles">
                 <?php
                 foreach ($reqarticles as $key) {
-                    echo "<p>  $key[article]</p>";
+                    echo "<br><br><p>  $key[article]</p>";
                 }
                 ?>
             </div>
         </article>
         <ul class="pagination">
-            <li class="<?php if ($current == '1') {
+            <li class=" espace-pagination <?php if ($current == '1') {
                             echo "disabled";
                         } ?>"><a href="articles.php?p=<?php if ($current != '1') {
                                                             echo $current - 1;
@@ -96,7 +96,7 @@ if (isset($_GET['appliquer'])) {
                 }
             }
             ?>
-            <li class="<?php if ($current == $nbPage) {
+            <li class=" espace-pagination <?php if ($current == $nbPage) {
                             echo "disabled";
                         } ?>"><a href="articles.php?p=<?php if ($current != $nbPage) {
                                                             echo $current + 1;

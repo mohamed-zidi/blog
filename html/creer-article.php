@@ -15,7 +15,7 @@ include '../traitement_php/creer-article_traitement.php';
 <body>
     <main id="formcenter">
         <div align="center">
-            <form method="POST">
+            <form class="form" method="POST">
                 <table class="form-input">
                     <tr>
                         <td>
@@ -34,7 +34,7 @@ include '../traitement_php/creer-article_traitement.php';
                     <tr>
                         <td>
                         <label for="newarticle">Ecrire un article:</label>
-                        <input type="texterea" name="newarticle" id="newarticle">
+                        <input type="texterea" name="newarticle" id="newarticle" style="height:50px;">
                         </td>
                     </tr>
                     <tr>

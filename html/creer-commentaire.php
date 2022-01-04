@@ -15,7 +15,7 @@ include '../traitement_php/creer-commentaire_traitement.php';
 <body>
     <main id="formcenter">
         <div align="center">
-            <form method="POST">
+            <form class="form" method="POST">
                 <table class="form-input">
                     <tr>
                         <td>

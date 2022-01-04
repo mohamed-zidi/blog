@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -11,11 +14,24 @@
 
 <body>
     <?php include("header/header.php"); ?>
+    <img src="https://zupimages.net/up/22/01/46s5.png" alt=""  style="width:100%;" />
     <main>
-        <section>
+        <section >
+            <h1 class="h-1">ARTICLES</h1>
+            <div class="header" align="center">
             <div>
-                <p class="p">le blog culinaire pour les gourmands et les amoureux de la cuisine Francaise </p>
+                <h3 class="h-3">ENTREE</h3>
+                <p class="particle">le blog culinaire pour les gourmands et les amoureux de la cuisine Francaise </p>
             </div>
+            <div>
+                <h3 class="h-3">PLAT</h3>
+                <p class="particle">le blog culinaire pour les gourmands et les amoureux de la cuisine Francaise </p>
+            </div>
+            <div>
+                <h3 class="h-3">DESSERT</h3>
+                <p class="particle">le blog culinaire pour les gourmands et les amoureux de la cuisine Francaise </p>
+            </div>
+        </div>
         </section>
     </main>
     <div class="haut-de-page">

@@ -10,7 +10,6 @@ if(isset($_POST['connexion'])){
         $res = mysqli_query($db,"SELECT * FROM utilisateurs WHERE login = '".$loginconnect."' AND password = '".$mdpconnect."' ");
         $result = mysqli_num_rows($res);
         $f = mysqli_fetch_all($res);
-        
         if($result == 1){
             session_start();
             $_SESSION['login'] = $loginconnect;
@@ -19,6 +18,7 @@ if(isset($_POST['connexion'])){
             $_SESSION['mail'] = $f[0][3];
             $_SESSION['id_droit'] = $f[0][4];
             header('location:../index.php');
+            echo 2;
         } else {
             session_start();
             $_SESSION['erreur'] = 'Identifiants érronés';

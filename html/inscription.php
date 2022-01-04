@@ -17,7 +17,7 @@ include '../traitement_php/inscription_traitement.php';
 <body>
 
     <main id="formcenter">
-        <form action="" method="post">
+        <form class="form" action="" method="post">
             <h1 class="h_1">Créer votre compte <br> Cuisinella</h1>
             <div>
                 <label for="login">Ajoutez votre login</label>

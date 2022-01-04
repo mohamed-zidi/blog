@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['deconnexion'])) {
     session_destroy();
-    header('location:../html/connexion.php');
+    header('location:../blog/html/connexion.php');
 }
 ?>
 
@@ -13,31 +13,31 @@ if (isset($_POST['deconnexion'])) {
         <nav>
             <div class="header">
                 <ul>
-                    <a class="aicon" href="index.php">Accueil</a>
+                    <a class="aicon" href="../index.php">Accueil</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="index.php">Liste utilisateurs</a>
+                    <a class="aicon" href="/html/admin.php">Liste utilisateurs</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="#.php">Ecrire un article</a>
-                </ul>
-                <ul>
-                    <a class="aicon" href="article-commentaire.php">Voir un article</a>
+                    <a class="aicon" href="#">Lien github</a>
                 </ul>
             </div>
             <div>
                 <ul>
                     <input type="search" placeholder="search" aria-label="search" required>
-                    <input type="submit" value="Rechercher">
+                    <button class="button" type="submit" value="Rechercher">Rechercher</button>
                 </ul>
             </div>
             <div class="header conin">
                 <ul>
-                    <a class="aicon" href="#">Lien github</a>
+                    <a class="aicon" href="../blog/articles.php">Article</a>
+                </ul>
+                <ul>
+                    <a class="aicon" href="../blog/html/articles.php">Ecrire un article</a>
                 </ul>
                 <ul>
                     <form action="" method="post">
-                        <button type="submit" value="deconnexion" name="deconnexion"></button>
+                    <button class="buttondeco" type="submit" value="deconnexion" name="deconnexion">Deconnexion</button>
                     </form>
                 </ul>
             </div>
@@ -49,28 +49,28 @@ if (isset($_POST['deconnexion'])) {
         <nav>
             <div class="header">
                 <ul>
-                    <a class="aicon" href="index.php">Accueil</a>
+                    <a class="aicon" href="../blog/index.php">Accueil</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="#.php">Articles</a>
+                    <a class="aicon" href="../blog/html/articles.php">Articles</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="article-commentaire.php">Voir un article</a>
+                    <a class="aicon" href="../blog/html/article-commentaire.php">Voir un article</a>
                 </ul>
             </div>
             <div>
                 <ul>
                     <input type="search" placeholder="search" aria-label="search" required>
-                    <button type="submit">Rechercher</button>
+                    <button class="button" type="submit" value="Rechercher">Rechercher</button>
                 </ul>
             </div>
             <div class="header conin">
                 <ul>
-                    <a class="aicon" href="profil.php">Profil</a>
+                    <a class="aicon" href="../blog/html/profil.php">Profil</a>
                 </ul>
                 <ul>
                     <form action="" method="post">
-                        <input type="submit" value="deconnexion" name="deconnexion">
+                    <button class="buttondeco" type="submit" value="deconnexion" name="deconnexion">Deconnexion</button>
                     </form>
                 </ul>
             </div>
@@ -82,22 +82,22 @@ if (isset($_POST['deconnexion'])) {
         <nav>
             <div class="header">
                 <ul>
-                    <a class="aicon" href="index.php">Accueil</a>
+                    <a class="aicon" href="../blog/index.php">Accueil</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="#.php">Articles</a>
+                    <a class="aicon" href="../blog/html/articles.php">Articles</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="#.php">Ecrire un article</a>
+                    <a class="aicon" href="../blog/html/ecrire-un-article.php">Ecrire un article</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="article-commentaire.php">Voir un article</a>
+                    <a class="aicon" href="../blog/html/article-commentaire.php">Voir un article</a>
                 </ul>
             </div>
             <div>
                 <ul>
                     <input type="search" placeholder="search" aria-label="search" required>
-                    <button type="submit">Rechercher</button>
+                    <button class="button" type="submit" value="Rechercher">Rechercher</button>
                 </ul>
             </div>
             <div class="header conin">
@@ -118,10 +118,10 @@ if (isset($_POST['deconnexion'])) {
         <nav>
             <div class="header">
                 <ul>
-                    <a class="aicon" href="index.php">Accueil</a>
+                    <a class="aicon" href="../blog/index.php">Accueil</a>
                 </ul>
                 <ul class="dropdown">
-                    <a class="aicon" href="index.php">Categories</a>
+                    <a class="aicon" href="../blog/index.php">Categories</a>
                     <ul class="dropdown-content">
                         <li><a class="aicon" href="index.php">ASS</a></li>
                         <li><a class="aicon" href="index.php">ASS</a></li>
@@ -132,7 +132,7 @@ if (isset($_POST['deconnexion'])) {
             <div>
                 <ul>
                     <input type="search" placeholder="search" aria-label="search" required>
-                    <button type="submit">Rechercher</button>
+                    <button class="button" type="submit" value="Rechercher">Rechercher</button>
                 </ul>
             </div>
             <div class="header conin">

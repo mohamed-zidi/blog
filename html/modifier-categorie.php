@@ -19,7 +19,7 @@ include '../traitement_php/modifier-categorie_traitement.php';
     <main id="formcenter">
         <div align="center">
             <div>
-                <form class="form" method="POST">
+                <form class="form" class="form" method="POST">
                     <h1 class="h_1">Modifier la categorie </h1>
                     <table class="form-inpute">
                         <tr>

@@ -4,18 +4,20 @@
             <h1 class=" Gtitree">BLOG CUISINELLA</h1>
             <div class="foot">
                 <div>
-                    <a class="aicon" href="index.php">Accueil</a>
+                    <a class="aicon" href="../blog/index.php">Accueil</a>
                 </div>
                 <div>
-                    <a class="aicon" href="index.php" data-toggle="dropdown">Liste utilisateurs</a>
+                    <a class="aicon" href="../blog/html/admin.php">Liste utilisateurs</a>
                 </div>
                 <div>
                     <a class="aicon" href="#">Lien github</a>
                 </div>
                 <div>
-                    <form action="" method="post">
-                        <input type="submit" value="deconnexion" name="deconnexion">
-                    </form>
+                    <a class="aicon" href="#">Article</a>
+                </div>
+                
+                <div>
+                    <a class="aicon" href="../html/admin.php">Ecrire un article</a>
                 </div>
             </div>
             <div class="foot copyright">
@@ -35,24 +37,19 @@
             <h1 class=" Gtitree">BLOG CUISINELLA</h1>
             <div class="foot">
                 <div>
-                    <a class="aicon" href="index.php">Accueil</a>
+                    <a class="aicon" href="../blog/index.php">Accueil</a>
                 </div>
                 <div>
-                    <a class="aicon" href="#" data-toggle="dropdown">Articles</a>
+                    <a class="aicon" href="#">Articles</a>
                 </div>
                 <div>
-                    <a class="aicon" href="article-commentaire.php">Voir un artcile</a>
+                    <a class="aicon" href="../blog/html/article-commentaire.php">Voir un artcile</a>
                 </div>
                 <div>
-                    <a class="aicon" href="profil.php">Profil</a>
+                    <a class="aicon" href="../blog/html/profil.php">Profil</a>
                 </div>
                 <div>
-                    <form action="" method="post">
-                        <input type="submit" value="deconnexion" name="deconnexion">
-                    </form>
-                </div>
-                <div>
-                    <a class="aicon" href="contact.php">Contact</a>
+                    <a class="aicon" href="../blog/html/contact.php">Contact</a>
                 </div>
             </div>
             <div class="foot copyright">
@@ -75,24 +72,19 @@
                     <a class="aicon" href="index.php">Accueil</a>
                 </div>
                 <div>
-                    <a class="aicon" href="#" data-toggle="dropdown">Articles</a>
+                    <a class="aicon" href="#">Articles</a>
                 </div>
                 <div>
                     <a class="aicon" href="#.php">Ecrire un article</a>
                 </div>
                 <div>
-                    <a class="aicon" href="article-commentaire.php">Voir un article</a>
+                    <a class="aicon" href="../blog/html/article-commentaire.php">Voir un article</a>
                 </div>
                 <div>
-                    <a class="aicon" href="profil.php">Profil</a>
+                    <a class="aicon" href="../blog/html/profil.php">Profil</a>
                 </div>
                 <div>
-                    <form action="" method="post">
-                        <input type="submit" value="deconnexion" name="deconnexion">
-                    </form>
-                </div>
-                <div>
-                    <a class="aicon" href="contact.php">Contact</a>
+                    <a class="aicon" href="../blog/html/contact.php">Contact</a>
                 </div>
             </div>
             <div class="foot copyright">
@@ -112,16 +104,16 @@
             <h1 class=" Gtitree">BLOG CUISINELLA</h1>
             <div class="foot">
                 <div>
-                    <a class="aicon" href="index.php">Accueil</a>
+                    <a class="aicon" href="../blog/index.php">Accueil</a>
                 </div>
                 <div>
-                    <a class="aicon" href="categories.php">Categories</a>
+                    <a class="aicon" href="../blog/html/categories.php">Categories</a>
                 </div>
                 <div>
-                    <a class="aicon" href="connexion.php">Connexion</a>
+                    <a class="aicon" href="../blog/html/connexion.php">Connexion</a>
                 </div>
                 <div>
-                    <a class="aicon" href="inscription.php">Inscription</a>
+                    <a class="aicon" href="../blog/html/inscription.php">Inscription</a>
                 </div>
                 <div>
                     <a class="aicon" href="contact.php">Contact</a>

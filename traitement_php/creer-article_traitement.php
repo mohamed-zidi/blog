@@ -7,7 +7,6 @@ $checke = $bdd->prepare("SELECT * FROM `categories`");
 $checke->execute(array());
 $row = $checke->rowCount();
 $data = $checke->fetchAll(PDO::FETCH_ASSOC);
-var_dump($data);
 foreach ($data as $categorie)
 
 

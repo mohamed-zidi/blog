@@ -51,7 +51,7 @@ $REQ = $bdd->query('SELECT * FROM droits');
                 ?>
             </tbody>
         </table>
-        <button class="button" type="submit" name="connexion"><a href="../html/creer-droit.php?id=<?php $rows['id'];?>\">Créer</a></button>
+        <button class="button" type="submit" name="connexion"><a href="../html/creer-droit.php?id=<?php $rows['id'];?>\">Créer un droit</a></button>
     </section>
         <section>
 <h2 class="h2admin">Utilisateurs</h2>
@@ -81,7 +81,7 @@ $REQ = $bdd->query('SELECT * FROM droits');
                 ?>
             </tbody>
         </table>
-        <button class="button" type="submit" name="connexion"><a href="../blog/html/creer-user.php?id=<?php $rows['id'];?>\">Créer</a></button>
+        <button class="button" type="submit" name="connexion"><a href="../blog/html/creer-user.php?id=<?php $rows['id'];?>\">Créer un utilisateur</a></button>
     </section>
     <section>
 <h2 class="h2admin">Categories</h2>
@@ -105,7 +105,7 @@ $REQ = $bdd->query('SELECT * FROM droits');
                 ?>
             </tbody>
         </table>
-        <button class="button" type="submit" name="connexion"><a href="../html/creer-categorie.php?id=<?php $rows['id'];?>\">Créer</a></button>
+        <button class="button" type="submit" name="connexion"><a href="../html/creer-categorie.php?id=<?php $rows['id'];?>\">Créer une categorie</a></button>
     </section>
         <section>
 <h2 class="h2admin">Articles</h2>
@@ -135,7 +135,7 @@ $REQ = $bdd->query('SELECT * FROM droits');
                 ?>
             </tbody>
         </table>
-        <button class="button" type="submit" name="connexion"><a href="../html/creer-article.php?id=<?php $rows['id'];?>\">Créer</a></button>
+        <button class="button" type="submit" name="connexion"><a href="../html/creer-article.php?id=<?php $rows['id'];?>\">Créer un article</a></button>
     </section>
         <section>
 <h2 class="h2admin">Commentaires</h2>
@@ -163,7 +163,7 @@ $REQ = $bdd->query('SELECT * FROM droits');
                 ?>
             </tbody>
         </table>
-        <button class="button" type="submit" name="connexion"><a href="../html/creer-commentaire.php?id=<?php $rows['id'];?>\">Créer</a></button>
+        <button class="button" type="submit" name="connexion"><a href="../html/creer-commentaire.php?id=<?php $rows['id'];?>\">Créer un commentaire</a></button>
     </section>
   
     </main>

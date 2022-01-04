@@ -1,7 +1,6 @@
 <?php
 include '../traitement_php/connexion_traitement.php';
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -16,9 +15,11 @@ session_start();
 </head>
 
 <body>
-
+    <div class="retour">
+<button class="buttonform" onclick="window.location.href='../index.php'">Retourner à l'acceuil</button>
+    </div>
     <main id="formcenter">
-        <form action="../traitement_php/connexion_traitement.php" method="post">
+        <form class="form" action="../traitement_php/connexion_traitement.php" method="post">
             <h1 class="h_1">Connectez-vous à votre<br> compte Cuisinella</h1>
             <div>
                 <label for="connexion">Entrez votre login : </label><br>
@@ -40,6 +41,7 @@ session_start();
                     ?>
                 <?php } ?>
                 </p>
+                <p align="center">Pour nous rejoindre. <a class="connect-here" href="../html/inscription.php">Créer un compte</a></p>
         </form>
     </main>
     <p class="copy">Copyright©2021 Cuisinella. Tous droits réservés.</p>

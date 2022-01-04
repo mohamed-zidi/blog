@@ -8,7 +8,6 @@ $checke = $bdd->prepare("SELECT * FROM `droits`");
 $checke->execute(array());
 $row = $checke->rowCount();
 $data = $checke->fetchAll(PDO::FETCH_ASSOC);
-var_dump($data);
 
 if (isset($_POST['inscription'])) {
 

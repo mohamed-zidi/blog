@@ -1,7 +1,10 @@
 * {
   margin: 0;
 }
-
+a {
+  text-decoration: none;
+  color: #448bb8;
+}
 /* css header */
 .Gtitre {
   padding-bottom: 2%;
@@ -68,11 +71,19 @@ li {
 
 /* css index */
 
-.p {
-  font-size: 200%;
-  position: absolute;
-  top: 90%;
-  left: 18%;
+.h-1 {
+  font-size: 250%;
+  text-align: center;
+  padding: 6%;
+}
+
+.h-3 {
+  padding-bottom: 4%;
+}
+
+.particle {
+  border: 2px solid bisque;
+  border-radius: 2px;
 }
 
 .baniere {
@@ -98,7 +109,7 @@ li {
   padding-top: 4%;
 }
 
-.foot{
+.foot {
   display: flex;
   justify-content: space-around;
   padding-top: 5%;
@@ -133,16 +144,31 @@ button {
   border-radius: 8px;
 }
 
-button[type="submit"]:hover {
-  background-color: #fd5e086b;
-  cursor: pointer;
-}
-
-button[type="submit"] {
+.button {
   background-color: rgb(241, 200, 150);
   color: white;
   padding: 8px;
   border: none;
+  cursor: pointer;
+  margin-bottom: 5%;
+  font-size: 120%;
+}
+
+.button:hover {
+  background-color: #fd5e086b;
+  cursor: pointer;
+}
+
+.buttondeco {
+  color: bisque;
+  border: none;
+  cursor: pointer;
+  font-size: 110%;
+  background-color: #143c55;
+}
+
+.buttondeco:hover {
+  background-color: #fd5e086b;
   cursor: pointer;
 }
 
@@ -167,7 +193,6 @@ th {
   border: 2px solid black;
 }
 
-
 .th {
   color: rgb(241, 200, 150);
   font-size: 150%;
@@ -175,14 +200,13 @@ th {
 
 /* css formulaire */
 
-#formcenter{
+#formcenter {
   display: flex;
   justify-content: center;
-  padding-top: 10%;
+  padding-top: 6%;
 }
 
-form {
-  background-color: #90a7b5;
+.form {
   border: 2px solid;
   border-radius: 5%;
   padding: 4%;
@@ -191,7 +215,7 @@ form {
 
 input[type="text"],
 input[type="password"],
-input[type="email"]{
+input[type="email"] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -203,17 +227,17 @@ input[type="email"]{
   width: 100%;
 }
 
-.input{
+input[type="submit"] {
   background-color: rgb(73 101 112);
   color: white;
   padding: 14px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 80%;
+  width: 50%;
 }
 
-.input:hover{
+input[type="submit"]:hover {
   background-color: rgb(28, 71, 88);
 }
 
@@ -222,4 +246,41 @@ input[type="email"]{
   justify-content: center;
   text-align: center;
   padding-bottom: 15%;
- }
+}
+
+.retour {
+  padding: 5% 0% 0% 10%;
+}
+
+.buttonform {
+  font-size: 120%;
+  cursor: pointer;
+}
+
+.buttonform:hover {
+  color: rgb(40, 135, 173);
+}
+
+/* css articles */
+
+.pagination{
+  display: flex;
+  justify-content: center;
+}
+
+.espace-articles{
+  padding-top: 5%;
+}
+
+.espace-pagination{
+  padding: 6% 4% 0% 4%;
+  font-size: 130%;
+}
+
+.active{
+  padding-top: 6%;
+}
+
+.select-categorie{
+  padding: 7% 0% 0% 38%;
+}
