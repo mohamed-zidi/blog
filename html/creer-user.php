@@ -46,7 +46,7 @@ include '../traitement_php/creer-user_traitement.php';
                             <label>Quel droit attribuer a l'utilisateur </label>
                             <select name="id_droits" id="id_droits">
 
-                                <?php foreach ($value as  $id_droits) {?>
+                                <?php foreach ($data as  $id_droits) {?>
 
                                     <option value="<? echo  $id_droits['id']; ?>"> <? echo $id_droits['nom']; ?> </option>
 

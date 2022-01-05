@@ -289,7 +289,10 @@ input[type="submit"]:hover {
 .articles-1{
   display: flex;
   justify-content: space-between;
-  border: 2PX;
+}
+
+.article-1{
+  border: 2px solid black;
 }
 
 .articles-2{
