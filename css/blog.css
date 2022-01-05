@@ -203,8 +203,9 @@ th {
 #formcenter {
   display: flex;
   justify-content: center;
-  padding-top: 6%;
+  padding-top:10%;
 }
+
 
 .form {
   border: 2px solid;
@@ -283,4 +284,21 @@ input[type="submit"]:hover {
 
 .select-categorie{
   padding: 7% 0% 0% 38%;
+}
+
+.articles-1{
+  display: flex;
+  justify-content: space-between;
+  border: 2PX;
+}
+
+.articles-2{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 3%;
+}
+
+.suite-art{
+  padding-top: 6%;
+  font-size: 130%;
 }

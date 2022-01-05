@@ -8,6 +8,7 @@ $checke = $bdd->prepare("SELECT * FROM `droits`");
 $checke->execute(array());
 $row = $checke->rowCount();
 $data = $checke->fetchAll(PDO::FETCH_ASSOC);
+var_dump($data);
 
 if (isset($_POST['inscription'])) {
 
@@ -18,8 +19,8 @@ if (isset($_POST['inscription'])) {
         $prenom = htmlspecialchars($_POST['email']);
         $password = htmlspecialchars($_POST['password']);
         $passwordverify =  htmlspecialchars($_POST['passwordverify']);
-        $id_droits = $_POST['id_droits'];
-
+        $id_droits =  htmlspecialchars($_POST['id_droits']);
+    
 
         $userid = $_GET['id'];
 

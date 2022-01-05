@@ -1,7 +1,6 @@
 <?php
 
 include '../traitement_php/creer-user_traitement.php';
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,7 +13,6 @@ include '../traitement_php/creer-user_traitement.php';
 
 <body>
     <main id="formcenter">
-        <h1 class="h-1">Compte CUISINELLA</h1>
         <div align="center">
             <form class="form" method="POST">
                 <table class="form-input">
@@ -48,13 +46,12 @@ include '../traitement_php/creer-user_traitement.php';
                             <label>Quel droit attribuer a l'utilisateur </label>
                             <select name="id_droits" id="id_droits">
 
-                                <? foreach ($data as   $id_droits) { ?>
+                                <?php foreach ($value as  $id_droits) {?>
 
-                                    <option value="<? echo  $id_droits['0']; ?>"> <? echo  $id_droits['nom']; ?> </option>
-                                    <option value="<? echo  $id_droits['1']; ?>"> <? echo  $id_droits['nom']; ?> </option>
-                                    <option value="<? echo  $id_droits['2']; ?>"> <? echo  $id_droits['nom']; ?> </option>
+                                    <option value="<? echo  $id_droits['id']; ?>"> <? echo $id_droits['nom']; ?> </option>
 
-                                <? } ?>
+                                <?php }
+                                 ?>
 
                             </select>
                         </td>
@@ -65,6 +62,7 @@ include '../traitement_php/creer-user_traitement.php';
                         </td>
                     </tr>
                 </table>
+                <p><a href='../index.php'>Retourner à l'acceuil</a></p>
             </form>
         </div>
     </main>

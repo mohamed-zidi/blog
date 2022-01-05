@@ -47,6 +47,7 @@ include '../traitement_php/modifier-user_traitement.php';
                             </td>
                         </tr>
                     </table>
+                    <p><a href='../index.php'>Retourner à l'acceuil</a></p>
                 </form>
             </div>
     </main>

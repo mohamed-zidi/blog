@@ -41,6 +41,7 @@ include '../traitement_php/modifier-categorie_traitement.php';
                             </td>
                         </tr>
                     </table>
+                    <p><a href='../index.php'>Retourner à l'acceuil</a></p>
                 </form>
             </div>
     </main>

@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+include '../blog/connexion_bdd/connexion-bdd.php';
+
+$reqarticles = $bdd->query("SELECT * FROM articles ORDER BY id DESC  LIMIT 0,3 ");
+$reqarticles->execute(array());
+$row = $reqarticles->rowCount();
+$datta = $reqarticles->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -14,24 +22,29 @@ session_start();
 
 <body>
     <?php include("header/header.php"); ?>
-    <img src="https://zupimages.net/up/22/01/46s5.png" alt=""  style="width:100%;" />
+    <img src="https://zupimages.net/up/22/01/46s5.png" alt="" style="width:100%;" />
     <main>
-        <section >
+        <section>
             <h1 class="h-1">ARTICLES</h1>
             <div class="header" align="center">
-            <div>
-                <h3 class="h-3">ENTREE</h3>
-                <p class="particle">le blog culinaire pour les gourmands et les amoureux de la cuisine Francaise </p>
+                <article >
+                    <div class="articles-1">
+                        <?php
+                        foreach ($datta as $key) {
+                            echo "<p>$key[article]</p>";
+                        }
+                        ?>
+                    </div>
+                    <div class="articles-2">
+                        <?php
+                        foreach ($datta as $key) {
+                            echo "<p>$key[date]</p>";
+                        }
+                        ?>
+                    </div>
+                    <p class="suite-art"><a href="../html/articles.php">Voir la suite ...<a></p>
+                </article>
             </div>
-            <div>
-                <h3 class="h-3">PLAT</h3>
-                <p class="particle">le blog culinaire pour les gourmands et les amoureux de la cuisine Francaise </p>
-            </div>
-            <div>
-                <h3 class="h-3">DESSERT</h3>
-                <p class="particle">le blog culinaire pour les gourmands et les amoureux de la cuisine Francaise </p>
-            </div>
-        </div>
         </section>
     </main>
     <div class="haut-de-page">
