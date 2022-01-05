@@ -1,9 +1,7 @@
 <?php
 
 include '../connexion_bdd/connexion-bdd.php';
-?> 
 
-<?php
 if (isset($_POST['valider'])) {
     $login = htmlspecialchars($_POST['login']);
     $mail = htmlspecialchars($_POST['mail']);
