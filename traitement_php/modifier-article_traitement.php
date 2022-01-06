@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 include '../connexion_bdd/connexion-bdd.php';
 
 $checke = $bdd->prepare("SELECT * FROM `categories`");
@@ -20,9 +18,8 @@ var_dump($datta);
 if (isset($_POST['modifier'])) {
 
     $newarticle = $_POST['newarticle'];
-    $categorie = $_POST['categorie'];
 
-    if (!empty($newarticle) && !empty($categorie)) {
+    if (!empty($newarticle)) {
 
 
         // $req = $bdd->prepare("UPDATE `droits` SET `id` = '$droit' WHERE id = '$userid'");

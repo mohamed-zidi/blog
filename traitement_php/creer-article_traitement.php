@@ -15,8 +15,7 @@ if (isset($_POST['creer'])) {
 
 
         // Création de variable pour chaque données avec sécu
-        // $id = $_SESSION['id'];
-        $id = 1;
+        $id = $_SESSION['id'];
         $categorie = htmlspecialchars($_POST['categorie']);
         $newarticle = htmlspecialchars($_POST['newarticle']);
 

@@ -1,5 +1,4 @@
 <?php
-
 include '../traitement_php/creer-commentaire_traitement.php';
 
 ?>
@@ -20,7 +19,7 @@ include '../traitement_php/creer-commentaire_traitement.php';
                     <tr>
                         <td>
                             <h1 class="h_1">Ajouter un commentaire</h1>
-                            <label for="article">Choisir la catégorie correspondante:</label>
+                            <label for="article">Choisir l'id de l'article à commenter:</label>
                             <select name="article" id="article">
                                 <?php foreach ($data as $article) { ?>
 

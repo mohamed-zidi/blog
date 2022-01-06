@@ -163,7 +163,6 @@ $REQ = $bdd->query('SELECT * FROM droits');
                 ?>
             </tbody>
         </table>
-        <button class="button" type="submit" name="connexion"><a href="../html/creer-commentaire.php?id=<?php $rows['id'];?>\">Créer un commentaire</a></button>
     </section>
   
     </main>

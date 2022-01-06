@@ -1,20 +1,18 @@
 <?php
 session_start();
-
 include '../connexion_bdd/connexion-bdd.php';
 
 $checke = $bdd->prepare("SELECT * FROM `articles`");
 $checke->execute(array());
 $row = $checke->rowCount();
 $data = $checke->fetchAll(PDO::FETCH_ASSOC);
+foreach ($data as $article)
 
 if (isset($_POST['creer'])) {
-    if (!empty($_POST['article']) && !empty($_POST['newcomment'])) {
-
+    if (!empty($_POST['newcomment'])  && !empty($_POST['article'])) {
 
         // Création de variable pour chaque données avec sécu
-        // $id = $_SESSION['id'];
-        $id = 1;
+        $id = $_SESSION['id'];
         $article = htmlspecialchars($_POST['article']);
         $newcomment = htmlspecialchars($_POST['newcomment']);
 

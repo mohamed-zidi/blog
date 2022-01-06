@@ -48,7 +48,7 @@ include '../traitement_php/creer-user_traitement.php';
 
                                 <?php foreach ($data as  $id_droits) {?>
 
-                                    <option value="<? echo  $id_droits['id']; ?>"> <? echo $id_droits['nom']; ?> </option>
+                                    <option value="<?=  $id_droits['id']; ?>"> <?php echo $id_droits['nom']; ?> </option>
 
                                 <?php }
                                  ?>
