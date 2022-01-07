@@ -19,7 +19,7 @@ if (isset($_GET['appliquer'])) {
         $reqarticles->execute(array());
         $row = $reqarticles->rowCount();
         $datta = $reqarticles->fetchAll(PDO::FETCH_ASSOC);
-  
+        
     }
     foreach ($datta as $key) {
         "<p>" . $key['article'] . "</p>";
@@ -42,8 +42,8 @@ if (isset($_GET['appliquer'])) {
 <body>
     <header>
 
- <?php include '../header/header.php'; ?>
-     
+        <?php include '../header/header.php'; ?>
+
     </header>
 
     <form class="select-categorie" method="GET">
@@ -71,17 +71,19 @@ if (isset($_GET['appliquer'])) {
                 <?php
                 foreach ($reqarticles as $key) {
                     echo "<br><br><p>  $key[article]</p>";
+                    
                 }
                 ?>
             </div>
         </article>
         <ul class="pagination">
             <li class=" espace-pagination <?php if ($current == '1') {
-                            echo "disabled";
-                        } ?>"><a href="articles.php?p=<?php if ($current != '1') {
+                                                echo "disabled";
+                                            } ?>"><a href="articles.php?p=<?php if ($current != '1') {
                                                             echo $current - 1;
                                                         } else {
                                                             echo $current;
+                                                            
                                                         } ?>">&laquo;</a></li>
             <?php
             for ($i = 1; $i <= $nbPage; $i++) {
@@ -97,11 +99,11 @@ if (isset($_GET['appliquer'])) {
             }
             ?>
             <li class=" espace-pagination <?php if ($current == $nbPage) {
-                            echo "disabled";
-                        } ?>"><a href="articles.php?p=<?php if ($current != $nbPage) {
+                                                echo "disabled";
+                                            } ?>"><a href="articles.php?p=<?php if ($current != $nbPage) {
                                                             echo $current + 1;
                                                         } else {
-                                                            echo $current;
+                                                            echo $current; 
                                                         } ?>">&raquo;</a></li>
         </ul>
     </main>
