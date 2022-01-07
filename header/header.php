@@ -19,7 +19,7 @@ if (isset($_POST['deconnexion'])) {
                     <a class="aicon" href="/blog/html/admin.php">Liste utilisateurs</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="#">Lien github</a>
+                    <a class="aicon" href="https://github.com/mohamed-zidi/blog">Lien github</a>
                 </ul>
             </div>
             <div>
