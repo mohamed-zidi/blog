@@ -4,30 +4,7 @@ session_start();
 include '../connexion_bdd/connexion-bdd.php';
 include '../traitement_php/articles-traitement.php';
 
-// $check = $bdd->query("SELECT * FROM categories");
-// $check->execute(array());
-// $row = $check->rowCount();
-// $data = $check->fetchAll(PDO::FETCH_ASSOC);
 
-// if (isset($_GET['appliquer'])) {
-
-//     if (!empty($_GET['categorie'])) {
-
-//         $categorie = $_GET['categorie'];
-
-//         $firstOfPage = ($current - 1) * $perPage;
-//         $reqarticles = $bdd->query("SELECT * FROM articles WHERE id_categorie = '$categorie' ORDER BY id DESC LIMIT $firstOfPage,$perPage ");
-//         $reqarticles->execute(array());
-//         $row = $reqarticles->rowCount();
-//         $datta = $reqarticles->fetchAll(PDO::FETCH_ASSOC);
-  
-//     }
-//     foreach ($datta as $key) {
-//         "<p>" . $key['article'] . "</p>";
-
-//         $article = $key['article'];
-//     }
-// }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -66,9 +43,7 @@ include '../traitement_php/articles-traitement.php';
         
         <?php
          
-        // if (isset($_GET['appliquer']) == true) {
-        //     echo $article;
-        // }
+       
         
         ?>
 
