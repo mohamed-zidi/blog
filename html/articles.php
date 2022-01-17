@@ -1,32 +1,33 @@
 <?php
+
 session_start();
 include '../connexion_bdd/connexion-bdd.php';
 include '../traitement_php/articles-traitement.php';
 
-$check = $bdd->query("SELECT * FROM categories");
-$check->execute(array());
-$row = $check->rowCount();
-$data = $check->fetchAll(PDO::FETCH_ASSOC);
+// $check = $bdd->query("SELECT * FROM categories");
+// $check->execute(array());
+// $row = $check->rowCount();
+// $data = $check->fetchAll(PDO::FETCH_ASSOC);
 
-if (isset($_GET['appliquer'])) {
+// if (isset($_GET['appliquer'])) {
 
-    if (!empty($_GET['categorie'])) {
+//     if (!empty($_GET['categorie'])) {
 
-        $categorie = $_GET['categorie'];
+//         $categorie = $_GET['categorie'];
 
-        $firstOfPage = ($current - 1) * $perPage;
-        $reqarticles = $bdd->query("SELECT * FROM articles WHERE id_categorie = '$categorie' ORDER BY id DESC LIMIT $firstOfPage,$perPage ");
-        $reqarticles->execute(array());
-        $row = $reqarticles->rowCount();
-        $datta = $reqarticles->fetchAll(PDO::FETCH_ASSOC);
-        
-    }
-    foreach ($datta as $key) {
-        "<p>" . $key['article'] . "</p>";
+//         $firstOfPage = ($current - 1) * $perPage;
+//         $reqarticles = $bdd->query("SELECT * FROM articles WHERE id_categorie = '$categorie' ORDER BY id DESC LIMIT $firstOfPage,$perPage ");
+//         $reqarticles->execute(array());
+//         $row = $reqarticles->rowCount();
+//         $datta = $reqarticles->fetchAll(PDO::FETCH_ASSOC);
+  
+//     }
+//     foreach ($datta as $key) {
+//         "<p>" . $key['article'] . "</p>";
 
-        $article = $key['article'];
-    }
-}
+//         $article = $key['article'];
+//     }
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -42,25 +43,33 @@ if (isset($_GET['appliquer'])) {
 <body>
     <header>
 
-        <?php include '../header/header.php'; ?>
-
+ <?php include '../header/header.php'; ?>
+     
     </header>
 
-    <form class="select-categorie" method="GET">
+    <form class="select-categorie" method="POST">
         <label>Trier les articles par catégorie :</label>
         <select name="categorie" id="categorie">
-            <?php foreach ($data as $categorie) { ?>
 
-                <option value="<?php echo $categorie['id']; ?>"> <?php echo $categorie['nom']; ?> </option>
+
+            <?php foreach ($data as $key => $categorie) { ?>
+
+                
+
+                <option value="<?= $categorie['id']; ?>"> <?= $categorie['nom']; ?> </option>
 
             <?php  } ?>
+            
         </select>
-        <button type="submit" name="appliquer" value="1">Appliquer</button><br><br>
-
+        
+            <button type="submit" name="appliquer" value="appliquer">Appliquer</button>
+        
         <?php
-        if (isset($_GET['appliquer']) == true) {
-            echo $article;
-        }
+         
+        // if (isset($_GET['appliquer']) == true) {
+        //     echo $article;
+        // }
+        
         ?>
 
     </form>
@@ -68,44 +77,122 @@ if (isset($_GET['appliquer'])) {
     <main>
         <article>
             <div class="articles">
-                <?php
-                foreach ($reqarticles as $key) {
-                    echo "<br><br><p>  $key[article]</p>";
+                
+                <table>
+                    <thead>
+                        
+                            <th>Article</th>
+                            <th>Date</th>
+                            
+                        
+                    </thead>
+
+                    <tbody>
+                    <?php
                     
-                }
-                ?>
+                    
+                    if(isset($_POST['appliquer']) || isset($_GET['categorie']) ){ ?>
+        
+                        <form action="" method="post">
+                        <button type="submit" name="retour" value="retour">Revenir aux articles</button>
+                        </form>
+
+                        
+
+                        <?php
+                        foreach($articles2 as $article2){
+                            ?>
+                            <tr>
+                            <td><?= $article2['article']; ?> </td>
+                            <td><?= $article2['date']; ?></td>
+                            </tr>
+                    
+                        
+                        <?php   
+                        }
+
+                    ?>
+                    </tbody>
+                </table>
             </div>
+            <nav>
+                <ul>
+                    <?php
+                        if($current_page2 != '1'){
+                        ?>
+                            <li class="espace-pagination"><a href="articles.php?page=<?= $current_page2 -1 ?>&categorie=<?= $id_cat ?>">Précédente</a></li>
+                            
+                        <?php }
+
+                    ?>
+                    
+                        <?php for($page2= 1; $page2<=$pages2; $page2++): ?>
+                            <?php if($page2 != $current_page2): ?>
+                        <li> <a href="articles.php?p=<?=$page2?>&categorie=<?=$id_cat?>"><?=$page2?></a></li>
+                            <?php endif ?>
+                        <?php endfor ?>
+                        
+                    <?php 
+                        if($current_page2 != $pages2){
+                            ?>
+                            <li class = "espace-pagination"><a href="articles.php?page=<?= $current_page2 + 1?>&categorie=<?= $id_cat ?>">Suivante</a> </li>
+                            
+                        <?php }
+                    ?>
+                    
+                </ul>
+            </nav>
+            
         </article>
-        <ul class="pagination">
-            <li class=" espace-pagination <?php if ($current == '1') {
-                                                echo "disabled";
-                                            } ?>"><a href="articles.php?p=<?php if ($current != '1') {
-                                                            echo $current - 1;
-                                                        } else {
-                                                            echo $current;
-                                                            
-                                                        } ?>">&laquo;</a></li>
-            <?php
-            for ($i = 1; $i <= $nbPage; $i++) {
-                if ($i == $current) {
-            ?>
-                    <li class="active"><a href="?p=<?php echo $i ?>"><?php echo $i ?> </a></li>
-                <?php
-                } else {
-                ?>
-                    <li><a href="?p=<?php echo $i ?>"><?php echo $i ?> </a></li>
-            <?php
-                }
-            }
-            ?>
-            <li class=" espace-pagination <?php if ($current == $nbPage) {
-                                                echo "disabled";
-                                            } ?>"><a href="articles.php?p=<?php if ($current != $nbPage) {
-                                                            echo $current + 1;
-                                                        } else {
-                                                            echo $current; 
-                                                        } ?>">&raquo;</a></li>
-        </ul>
+
+                    <?php } else{
+                        
+                        // echo $pages;
+                        foreach($articles as $article){
+                            ?>
+                            <tr>
+                            <td><?= $article['article']; ?> </td>
+                            <td><?= $article['date']; ?></td>
+                            </tr>
+                    
+                        
+                        <?php   
+                        }
+
+                    ?>
+                    </tbody>
+                </table>
+            </div>
+            <nav>
+                <ul>
+                    <?php
+                        if($current_page != '1'){
+                        ?>
+                            <li class="espace-pagination"><a href="articles.php?page=<?= $current_page -1 ?>">Précédente</a></li>
+
+                        <?php }
+
+                    ?>
+                    
+                        <?php for($page = 1; $page<=$pages; $page++): ?>
+                            <?php if($page != $current_page): ?>
+                        <li> <a href="articles.php?page=<?= $page ?>"><?=$page?></a></li>
+                            <?php endif ?>
+                            <?php endfor ?>
+                        
+                    <?php  
+                        if($current_page != $pages){
+                            ?>
+                            <li class = "espace-pagination"><a href="articles.php?page=<?= $current_page + 1?>">Suivante</a> </li>
+
+                        <?php }
+                    ?>
+                    
+                </ul>
+            </nav>
+            <?php } ?>
+        </article>
+        
     </main>
 
 
