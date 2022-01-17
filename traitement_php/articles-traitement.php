@@ -1,40 +1,9 @@
 <?php
-// session_start();
+
 include '../connexion_bdd/connexion-bdd.php';
-//  $db = new PDO('mysql:host=localhost;dbname=blog','root','');
 
-// $req = $bdd->query('SELECT COUNT(*) AS total FROM req_articles');
-// $result = $req->fetch();
-// $total = $result['total'];
 
-// // $reqarticles->fetchAll() ;
 
-// if(isset($_GET['p']))
-// {
-//     $current = $_GET['p'];
-
-//    /* if($_GET['p'] > $nbPage){
-//        $current = $nbPage;
-//    }
-//    else{
-//        $current = $_GET['p'];
-//    } */
-// }
-// else
-// {
-//     $current = 1;
-// }
-
-// return $reqarticles = $db->query("SELECT * FROM req_articles ORDER BY id DESC ");
-
-// $perPage = 5 * $current;
-// $pageStart = $perPage - 5;
-// $pageEnd = $pageStart + 5;
-
-// $nbPage = ceil($total/$perPage);
-
-// $reqarticles = $bdd->query("SELECT article FROM req_articles ORDER BY id DESC LIMIT $pageStart, $pageEnd");
-// $reqarticles->execute();
 
 
 
@@ -171,7 +140,5 @@ if(isset($_POST['retour'])){
             // recuperation des articles dans un tableau associatif
             $articles2 = $req_articles2->fetchAll(PDO::FETCH_ASSOC);
                     }
-                    // var_dump($articles2);
-                    // var_dump($current_page);
-                    // var_dump($pages);
+                    
 ?>
