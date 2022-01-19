@@ -120,7 +120,9 @@ if (isset($_POST['deconnexion'])) {
                 <ul>
                     <a class="aicon" href="../index.php">Accueil</a>
                 </ul>
-                
+                <ul>
+                    <a class="aicon" href="articles.php">Articles</a>
+                </ul>
             </div>
             <div>
                 <ul>

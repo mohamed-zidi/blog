@@ -28,21 +28,12 @@ $datta = $reqarticles->fetchAll(PDO::FETCH_ASSOC);
             <h1 class="h-1">ARTICLES</h1>
             <div class="header" align="center">
                 <article >
-                <div class="articles-1">
                         <?php
                         foreach ($datta as $key) {?>
-                            <div class="article-1">
+                        <div class="wrappers">
                            <?php  echo "<p>$key[article]</p>";?>
-                          </div>
+                        </div>
                         <?php } ?>
-                  </div>
-                    <div class="articles-2">
-                        <?php
-                        foreach ($datta as $key) {
-                            echo "<p>$key[date]</p>";
-                        }
-                        ?>
-                    </div>
                     <p class="suite-art"><a href="html/articles.php">Voir la suite ...<a></p>
                 </article>
             </div>
