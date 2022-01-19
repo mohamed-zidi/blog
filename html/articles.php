@@ -108,7 +108,7 @@ include '../traitement_php/articles-traitement.php';
                         <?php endfor ?>
                         
                     <?php 
-                        if($current_page2 != $pages2){
+                        if($current_page2 != $pages2 && $current_page2 <= $pages2){
                             ?>
                             <li class = "espace-pagination"><a href="articles.php?page=<?= $current_page2 + 1?>&categorie=<?= $id_cat ?>">Suivante</a> </li>
                             
