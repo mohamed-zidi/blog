@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['deconnexion'])) {
     session_destroy();
-    header('location:connexion.php');
+    header('location:html/connexion.php');
 }
 ?>
 
@@ -13,10 +13,10 @@ if (isset($_POST['deconnexion'])) {
         <nav>
             <div class="header">
                 <ul>
-                    <a class="aicon" href="../index.php">Accueil</a>
+                    <a class="aicon" href="index.php">Accueil</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="admin.php">Liste utilisateurs</a>
+                    <a class="aicon" href="html/admin.php">Liste utilisateurs</a>
                 </ul>
                 <ul>
                     <a class="aicon" href="https://github.com/mohamed-zidi/blog" target="_blank">Lien github</a>
@@ -30,10 +30,10 @@ if (isset($_POST['deconnexion'])) {
             </div>
             <div class="header conin">
                 <ul>
-                    <a class="aicon" href="articles.php">Article</a>
+                    <a class="aicon" href="html/articles.php">Article</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="ecrire-article.php">Ecrire un article</a>
+                    <a class="aicon" href="html/ecrire-article.php">Ecrire un article</a>
                 </ul>
                 <ul>
                     <form action="" method="post">
@@ -49,13 +49,13 @@ if (isset($_POST['deconnexion'])) {
         <nav>
             <div class="header">
                 <ul>
-                    <a class="aicon" href="../index.php">Accueil</a>
+                    <a class="aicon" href="index.php">Accueil</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="articles.php">Articles</a>
+                    <a class="aicon" href="html/articles.php">Articles</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="article-commentaire.php">Commenter les articles</a>
+                    <a class="aicon" href="html/article-commentaire.php">Commenter les articles</a>
                 </ul>
             </div>
             <div>
@@ -66,7 +66,7 @@ if (isset($_POST['deconnexion'])) {
             </div>
             <div class="header conin">
                 <ul>
-                    <a class="aicon" href="profil.php">Profil</a>
+                    <a class="aicon" href="html/profil.php">Profil</a>
                 </ul>
                 <ul>
                     <form action="" method="post">
@@ -82,16 +82,16 @@ if (isset($_POST['deconnexion'])) {
         <nav>
             <div class="header">
                 <ul>
-                    <a class="aicon" href="../index.php">Accueil</a>
+                    <a class="aicon" href="index.php">Accueil</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="articles.php">Articles</a>
+                    <a class="aicon" href="html/articles.php">Articles</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="ecrire-article.php">Ecrire un article</a>
+                    <a class="aicon" href="html/ecrire-article.php">Ecrire un article</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="article-commentaire.php">Voir un article</a>
+                    <a class="aicon" href="html/article-commentaire.php">Voir un article</a>
                 </ul>
             </div>
             <div>
@@ -118,10 +118,10 @@ if (isset($_POST['deconnexion'])) {
         <nav>
             <div class="header">
                 <ul>
-                    <a class="aicon" href="../index.php">Accueil</a>
+                    <a class="aicon" href="../blog/index.php">Accueil</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="articles.php">Articles</a>
+                    <a class="aicon" href="html/articles.php">Articles</a>
                 </ul>
             </div>
             <div>
@@ -132,10 +132,10 @@ if (isset($_POST['deconnexion'])) {
             </div>
             <div class="header conin">
                 <ul>
-                    <a class="aicon" href="connexion.php">Connexion</a>
+                    <a class="aicon" href="html/connexion.php">Connexion</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="inscription.php">Inscription</a>
+                    <a class="aicon" href="html/inscription.php">Inscription</a>
                 </ul>
             </div>
         </nav>

@@ -4,20 +4,20 @@
             <h1 class=" Gtitree">BLOG CUISINELLA</h1>
             <div class="foot">
                 <div>
-                    <a class="aicon" href="../index.php">Accueil</a>
+                    <a class="aicon" href="index.php">Accueil</a>
                 </div>
                 <div>
-                    <a class="aicon" href="admin.php">Liste utilisateurs</a>
+                    <a class="aicon" href="html/admin.php">Liste utilisateurs</a>
                 </div>
                 <div>
-                    <a class="aicon" href="#">Lien github</a>
+                    <a class="aicon" href="https://github.com/mohamed-zidi/blog">Lien github</a>
                 </div>
                 <div>
-                    <a class="aicon" href="articles.php">Article</a>
+                    <a class="aicon" href="html/articles.php">Article</a>
                 </div>
                 
                 <div>
-                    <a class="aicon" href="admin.php">Ecrire un article</a>
+                    <a class="aicon" href="html/admin.php">Ecrire un article</a>
                 </div>
             </div>
             <div class="foot copyright">
@@ -37,16 +37,16 @@
             <h1 class=" Gtitree">BLOG CUISINELLA</h1>
             <div class="foot">
                 <div>
-                    <a class="aicon" href="../index.php">Accueil</a>
+                    <a class="aicon" href="index.php">Accueil</a>
                 </div>
                 <div>
-                    <a class="aicon" href="articles.php">Articles</a>
+                    <a class="aicon" href="html/articles.php">Articles</a>
                 </div>
                 <div>
-                    <a class="aicon" href="article-commentaire.php">Commenter les articles</a>
+                    <a class="aicon" href="html/article-commentaire.php">Commenter les articles</a>
                 </div>
                 <div>
-                    <a class="aicon" href="profil.php">Profil</a>
+                    <a class="aicon" href="html/profil.php">Profil</a>
                 </div>
                 <!-- <div>
                     <a class="aicon" href="contact.php">Contact</a>
@@ -69,19 +69,19 @@
             <h1 class=" Gtitree">BLOG CUISINELLA</h1>
             <div class="foot">
                 <div>
-                    <a class="aicon" href="../index.php">Accueil</a>
+                    <a class="aicon" href="index.php">Accueil</a>
                 </div>
                 <div>
-                    <a class="aicon" href="articles.php">Articles</a>
+                    <a class="aicon" href="html/articles.php">Articles</a>
                 </div>
                 <!-- <div>
                     <a class="aicon" href="#.php">Ecrire un article</a>
                 </div> -->
                 <div>
-                    <a class="aicon" href="article-commentaire.php">Voir un article</a>
+                    <a class="aicon" href="html/article-commentaire.php">Voir un article</a>
                 </div>
                 <div>
-                    <a class="aicon" href="profil.php">Profil</a>
+                    <a class="aicon" href="html/profil.php">Profil</a>
                 </div>
                 <!-- <div>
                     <a class="aicon" href="../blog/html/contact.php">Contact</a>
@@ -104,16 +104,16 @@
             <h1 class=" Gtitree">BLOG CUISINELLA</h1>
             <div class="foot">
                 <div>
-                    <a class="aicon" href="../index.php">Accueil</a>
+                    <a class="aicon" href="index.php">Accueil</a>
                 </div>
                 <!-- <div>
                     <a class="aicon" href="../blog/html/categories.php">Categories</a>
                 </div> -->
                 <div>
-                    <a class="aicon" href="connexion.php">Connexion</a>
+                    <a class="aicon" href="html/connexion.php">Connexion</a>
                 </div>
                 <div>
-                    <a class="aicon" href="inscription.php">Inscription</a>
+                    <a class="aicon" href="html/inscription.php">Inscription</a>
                 </div>
                 <!-- <div>
                     <a class="aicon" href="contact.php">Contact</a>

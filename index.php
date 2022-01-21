@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include '../blog/connexion_bdd/connexion-bdd.php';
+include 'connexion_bdd/connexion-bdd.php';
 
 $reqarticles = $bdd->query("SELECT * FROM articles ORDER BY id DESC  LIMIT 0,3 ");
 $reqarticles->execute(array());
@@ -21,29 +21,20 @@ $datta = $reqarticles->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-    <?php include("header/header.php"); ?>
+    <?php include("header/header_index.php"); ?>
     <img src="https://zupimages.net/up/22/01/46s5.png" alt="" style="width:100%;" />
     <main>
         <section>
-            <h1 class="h-1">ARTICLES</h1>
+            <h1 class="h-1">DERNIERS ARTICLES</h1>
             <div class="header" align="center">
                 <article >
-                <div class="articles-1">
                         <?php
                         foreach ($datta as $key) {?>
-                            <div class="article-1">
+                        <div class="wrappers">
                            <?php  echo "<p>$key[article]</p>";?>
-                          </div>
+                        </div>
                         <?php } ?>
-                  </div>
-                    <div class="articles-2">
-                        <?php
-                        foreach ($datta as $key) {
-                            echo "<p>$key[date]</p>";
-                        }
-                        ?>
-                    </div>
-                    <p class="suite-art"><a href="../html/articles.php">Voir la suite ...<a></p>
+                    <p class="suite-art"><a href="html/articles.php">Voir la suite ...<a></p>
                 </article>
             </div>
         </section>
@@ -51,7 +42,7 @@ $datta = $reqarticles->fetchAll(PDO::FETCH_ASSOC);
     <div class="haut-de-page">
         <a href="#"><img src="https://zupimages.net/up/21/41/nngc.png"></a>
     </div>
-    <?php include("footer/footer.php"); ?>
+    <?php include("footer/footer_index.php"); ?>
 </body>
 
 </html>
