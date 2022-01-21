@@ -15,38 +15,35 @@ include '../traitement_php/profil_traitment.php';
 
 <body>
     <?php include '../header/header.php'; ?>
-    <main>
-        <form action="../traitement_php/profil_traitment.php" method="post">
+    <main id="formcenter">
+        <form class="form2" action="../traitement_php/profil_traitment.php" method="post">
+        <?php if(isset($_SESSION['affichage'])){ ?>
+        
+        <p class="affichage-erreur"><?php echo $_SESSION['affichage']; ?></p>
 
-            <label for="newlogin">Entrez votre login:</label>
+        <?php } ?>
+            <div class="modification-form1">
+            <b><label for="newlogin">Entrez votre login:</label></b><br>
             <input type="text" name="oldlogin" id="oldlogin">
 
-            <label for="newlogin">Entrez votre nouveau login:</label>
+            <b><label for="newlogin">Entrez votre nouveau login:</label>
             <input type="text" name="newlogin" id="newlogin">
-
-
             <input type="submit" value="Valider"  name="btn_profil">
-
-        </form>
-
-        <form action="../traitement_php/profil_traitment.php" method="post">
-
-            <label for="newmdp">Entrez votre mot de passe:</label>
+            </div>
+            <div class="modification-form2">
+            <b><label for="newmdp">Entrez votre mot de passe:</label></b>
             <input type="password" name="oldmdp" id="oldmdp">
 
-            <label for="newmdp">Entrez votre nouveau mot de passe:</label>
+            <b><label for="newmdp">Entrez votre nouveau mot de passe:</label></b>
             <input type="password" name="newmdp" id="newmdp">
 
-            <label for="newmdp2">Confirmez votre nouveau mot de passe:</label>
+            <b><label for="newmdp2">Confirmez votre nouveau mot de passe:</label></b>
             <input type="password" name="newmdp2" id="newmdp2">
 
             <input type="submit" value="Valider" name="btn_password">
-
-        </form>
-
-        <form action="../traitement_php/profil_traitment.php" method="post">
-
-            <label for="oldmail">Entrez votre mail:</label>
+            </div>
+            <div class="modification-form3">
+            <b><label for="oldmail">Entrez votre mail:</label></b>
             <input type="email" name="oldmail" id="oldmail">
 
             <label for="newmail">Entrez votre nouveau mail:</label>
@@ -54,15 +51,11 @@ include '../traitement_php/profil_traitment.php';
 
 
             <input type="submit" value="Valider" name="btn_mail">
+            </div>
+
 
         </form>
 
-
-        <?php if(isset($_SESSION['affichage'])){ ?>
-
-        <p><?php echo $_SESSION['affichage']; ?></p>
-
-        <?php } ?>
 
     </main>
 
