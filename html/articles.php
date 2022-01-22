@@ -23,12 +23,13 @@ include '../traitement_php/articles-traitement.php';
         <?php include '../header/header.php'; ?>
 
     </header>
+    
     <h1 class="titre-articles">Tous les articles du blog</h1>
     <form class="select-categorie" method="POST">
         <img class="icone-tri" src="https://zupimages.net/up/22/02/rjz6.png">
         <label class="tri-categorie">Trier les articles par catégorie :</label>
         <select name="categorie" id="categorie">
-
+        <option></option>
 
             <?php foreach ($data as $key => $categorie) { ?>
 
