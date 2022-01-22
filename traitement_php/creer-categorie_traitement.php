@@ -27,11 +27,11 @@ if (isset($_POST['creer'])) {
                 ));
                 // On redirige avec le message de succès
                 echo ("Votre ajout a bien été envoyé.");
-                header('Location: /html/admin.php');
+                header('Location: ../html/admin.php');
                 die();
             } else {
-                echo ("Votre ajout n'a pue etre effectuer veuillez réessayer.");
-                header('Location: ../html/creer-categorie_traitement.php');
+                echo ("Votre ajout n'a pu etre effectuer veuillez réessayer.");
+                header('Location: ../html/creer-categorie.php');
                 die();
             }
         }

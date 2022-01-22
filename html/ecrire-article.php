@@ -15,8 +15,8 @@ include '../traitement_php/ecrire-article_traitement.php';
 <body>
     <?php include '../header/header.php'; ?>
 
-    <main>
-        <form action="" method="post">
+    <main id="formcenter">
+        <form class="form2" action="" method="post">
 
             <label for="newarticle">Ecrire un article:</label>
             <input type="text" name="newarticle" id="newarticle">
@@ -33,6 +33,9 @@ include '../traitement_php/ecrire-article_traitement.php';
                     
             
             <input type="submit" name="valider" value="Valider">
+            <?php if(isset($_SESSION['affichage'])){
+                echo $_SESSION['affichage'];
+            } ?>
         </form>
     </main>
 

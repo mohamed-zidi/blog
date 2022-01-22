@@ -13,7 +13,7 @@ $check = $bdd->prepare("SELECT article FROM `articles` WHERE id = '$userid'");
 $check->execute(array());
 $row = $check->rowCount();
 $datta = $check->fetchAll(PDO::FETCH_ASSOC);;
-var_dump($datta);
+
 
 if (isset($_POST['modifier'])) {
 

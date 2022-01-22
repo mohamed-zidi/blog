@@ -27,7 +27,7 @@ include '../traitement_php/creer-categorie_traitement.php';
                     <tr>
                         <td>
                             <label>Confirmer nouvelle categorie</label>
-                            <input type="password" name="categorie2" placeholder="Entrer un mot de passe" required>
+                            <input type="text" name="categorie2" placeholder="Entrer un mot de passe" required>
                         </td>
                     </tr>
                     <tr>

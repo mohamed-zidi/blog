@@ -55,7 +55,7 @@ if (isset($_POST['deconnexion'])) {
                     <a class="aicon" href="articles.php">Articles</a>
                 </ul>
                 <ul>
-                    <a class="aicon" href="article-commentaire.php">Voir un article</a>
+                    <a class="aicon" href="article-commentaire.php">Commenter les articles</a>
                 </ul>
             </div>
             <div>

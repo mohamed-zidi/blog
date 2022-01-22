@@ -43,7 +43,7 @@
                     <a class="aicon" href="html/articles.php">Articles</a>
                 </div>
                 <div>
-                    <a class="aicon" href="html/article-commentaire.php">Voir un artcile</a>
+                    <a class="aicon" href="html/article-commentaire.php">Commenter les articles</a>
                 </div>
                 <div>
                     <a class="aicon" href="html/profil.php">Profil</a>

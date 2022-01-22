@@ -16,15 +16,11 @@ if (isset($_POST['creer'])) {
         $check = $bdd->prepare("SELECT id FROM `droits` WHERE id = $droit");
         $check->execute();
         $rows = $check->rowCount();
-        var_dump($rows);
 
         if ($rows == 0) {
             // On insère dans la base de données
             $insert = $bdd->prepare("INSERT INTO `droits` (`id`,`nom`) VALUES ('$droit','$droit2')");
-            $insert->execute(array(
-                'droit'    => $droit,
-                'droit2' => $droit2,
-            ));
+            $insert->execute();
             // On redirige avec le message de succès
             echo ("Votre ajout a bien été envoyé.");
             header('Location: ../html/admin.php');

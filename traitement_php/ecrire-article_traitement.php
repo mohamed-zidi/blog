@@ -8,8 +8,6 @@ $query = mysqli_query($db,"SELECT * FROM `categories`");
 $r= mysqli_fetch_all($query);
 
 
-
-
 if(isset($_POST['valider'])){
 
         $session_u = $_SESSION['login'];
@@ -27,7 +25,7 @@ if(isset($_POST['valider'])){
         if(!empty($_POST['newarticle']) && !empty($_POST['categorie'])){
         
         $insert_a = mysqli_query($db,"INSERT INTO articles(article, id_utilisateur, id_categorie, date) VALUES ('$article','$id_u','$id_cat',NOW())");
-
+        $_SESSION['affichage'] = "Votre article est enregistré";
     }
 }
 

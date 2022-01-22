@@ -23,19 +23,22 @@ include '../traitement_php/articles-traitement.php';
         <?php include '../header/header.php'; ?>
 
     </header>
-    
     <h1 class="titre-articles">Tous les articles du blog</h1>
     <form class="select-categorie" method="POST">
         <img class="icone-tri" src="https://zupimages.net/up/22/02/rjz6.png">
         <label class="tri-categorie">Trier les articles par catégorie :</label>
         <select name="categorie" id="categorie">
-        <option></option>
 
+            <option></option>
             <?php foreach ($data as $key => $categorie) { ?>
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 441ec74ecf3ff0e9a6ee58cdc11c0311d80f6c94
                 <option value="<?= $categorie['id']; ?>"> <?= $categorie['nom']; ?> </option>
+
 
             <?php  } ?>
 
@@ -76,33 +79,33 @@ include '../traitement_php/articles-traitement.php';
 
                 ?>
                 <div class="pagination-flex">
-                <?php
-                if ($current_page2 != '1') {
-                ?>
+                    <?php
+                    if ($current_page2 != '1') {
+                    ?>
+                        <!-- <div class="pagination-flex"> -->
+                        <!-- <div class="taille-pagination"> -->
+                        <li class="espace-pagination1"><a id="linka" href="articles.php?page=<?= $current_page2 - 1 ?>&categorie=<?= $id_cat ?>">Précédente</a></li>
+
+                    <?php }
+
+                    ?>
+
                     <!-- <div class="pagination-flex"> -->
-                    <!-- <div class="taille-pagination"> -->
-                    <li class="espace-pagination1"><a id="linka" href="articles.php?page=<?= $current_page2 - 1 ?>&categorie=<?= $id_cat ?>">Précédente</a></li>
+                    <?php for ($page2 = 1; $page2 <= $pages2; $page2++) : ?>
+                        <?php if ($page2 != $current_page2) : ?>
+                            <li> <a id="linka" href="articles.php?p=<?= $page2 ?>&categorie=<?= $id_cat ?>"><?= $page2 ?></a></li>
+                        <?php endif ?>
+                    <?php endfor ?>
+                    <!-- </div> -->
+                    <?php
+                    if ($current_page2 != $pages2 && $current_page2 <= $pages2) {
+                    ?>
+                        <li class="espace-pagination2"><a id="linka" href="articles.php?page=<?= $current_page2 + 1 ?>&categorie=<?= $id_cat ?>">Suivante</a> </li>
 
-                <?php }
+                    <?php }
+                    ?>
 
-                ?>
-
-                <!-- <div class="pagination-flex"> -->
-                <?php for ($page2 = 1; $page2 <= $pages2; $page2++) : ?>
-                    <?php if ($page2 != $current_page2) : ?>
-                        <li> <a id="linka" href="articles.php?p=<?= $page2 ?>&categorie=<?= $id_cat ?>"><?= $page2 ?></a></li>
-                    <?php endif ?>
-                <?php endfor ?>
-                <!-- </div> -->
-                <?php
-                if ($current_page2 != $pages2 && $current_page2 <= $pages2) {
-                ?>
-                    <li class="espace-pagination2"><a id="linka" href="articles.php?page=<?= $current_page2 + 1 ?>&categorie=<?= $id_cat ?>">Suivante</a> </li>
-
-                <?php }
-                ?>
-
-             </div>
+                </div>
         </article>
 
         <?php } else {
@@ -120,10 +123,10 @@ include '../traitement_php/articles-traitement.php';
         ?>
         </div>
         <div class="pagination-flex">
-        <?php
+            <?php
 
                 if ($current_page != '1') {
-        ?>
+            ?>
                 <li class="espace-pagination1"><a id="linka" href="articles.php?page=<?= $current_page - 1 ?>">Précédente</a></li>
 
             <?php }
@@ -144,7 +147,7 @@ include '../traitement_php/articles-traitement.php';
             <?php }
             ?>
         <?php } ?>
-            </div>
+        </div>
 
     </main>
 

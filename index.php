@@ -25,7 +25,7 @@ $datta = $reqarticles->fetchAll(PDO::FETCH_ASSOC);
     <img src="https://zupimages.net/up/22/01/46s5.png" alt="" style="width:100%;" />
     <main>
         <section>
-            <h1 class="h-1">ARTICLES</h1>
+            <h1 class="h-1">DERNIERS ARTICLES</h1>
             <div class="header" align="center">
                 <article >
                         <?php
