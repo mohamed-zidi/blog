@@ -1,58 +1,40 @@
 <?php
-
 session_start();
+
 include '../connexion_bdd/connexion-bdd.php';
 
-if(isset($_POST['btn_profil'])){
-    $login = $_POST['oldlogin'];
-    $new_login = $_POST['newlogin'];
+if (isset($_SESSION['login'])) {
 
+    $login = $_SESSION['login'];
 
-        if($login == $_SESSION['login'] && !empty($new_login)){
-            $change_login = mysqli_query($db,"UPDATE `utilisateurs` SET `login`= '$new_login' WHERE login = '$login'");
-            
-            $_SESSION['affichage'] = 'Votre login a été modifié.';
-            header('location:../html/profil.php');
-        } else { 
-            $_SESSION['affichage'] = 'Erreur veuillez recommencer.';
-            header('location:../html/profil.php');
+    if (isset($_POST['modifier'])) {
+
+        $newlogin = htmlspecialchars($_POST['newlogin']);
+        $newmail = htmlspecialchars($_POST['newmail']);
+        $pass = htmlspecialchars($_POST['password']);
+        $newpass = htmlspecialchars($_POST['newpass']);
+        $newpass2 = htmlspecialchars($_POST['newpass2']);
+
+        $check = $bdd->prepare("SELECT * FROM utilisateurs WHERE login = '$login'");
+        $check->execute();
+        $data = $check->fetchAll(PDO::FETCH_ASSOC);
+        var_dump($data);
+        $passwordVerify = $data[0]['password'];
+
+        if ($newlogin && $newpass == $newpass2) {
+
+            $newpassword = sha1($newpass2);
+
+            $check = $bdd->prepare("UPDATE utilisateurs SET login ='$newlogin', email ='$newmail',password ='$newpassword' WHERE login = '$login'");
+            $check->execute(array("login" => $newlogin, "email" => $newmail, "password" => $newpassword,));
+            $data = $check->fetch();
+
+            $_SESSION['login'] = $newlogin;
+
+            $_SESSION['mail'] = $newmail;
+
+            $_SESSION['affichage'] = "vos modifications ont bien été prise en compte";
+            header("location:../html/profil.php");
         }
-
+    }
 }
-
-if(isset($_POST['btn_password'])){
-    $mdp = sha1($_POST['oldmdp']);
-    $new_mdp = sha1($_POST['newmdp']);
-    $confirm_mdp = sha1($_POST['newmdp2']);
-
-        if($mdp == $_SESSION['mdp'] && !empty($new_mdp) && $new_mdp == $confirm_mdp){
-            $change_mdp = mysqli_query($db,"UPDATE `utilisateurs` SET `password`= '$new_mdp' WHERE password = '$mdp'");
-            
-            $_SESSION['affichage'] = 'Votre mot de passe a été modifié.';
-            header('location:../html/profil.php');
-        } else { 
-            $_SESSION['affichage'] = 'Erreur veuillez recommencer en vérifiant votre mot de passe.';
-            header('location:../html/profil.php');
-        }
-
-}
-
-if(isset($_POST['btn_mail'])){
-    $mail = $_POST['oldmail'];
-    $new_mail = $_POST['newmail'];
-    
-
-        if($mail == $_SESSION['mail'] && !empty($mail) && !empty($new_mail)){
-            $change_mdp = mysqli_query($db,"UPDATE `utilisateurs` SET `email`= '$new_mail' WHERE email = '$mail'");
-            
-            $_SESSION['affichage'] = 'Votre mail a été modifié.';
-            header('location:../html/profil.php');
-        } else { 
-            $_SESSION['affichage'] = 'Erreur veuillez recommencer en vérifiant votre mail.';
-            header('location:../html/profil.php');
-        }
-
-}
-
-
-?>
