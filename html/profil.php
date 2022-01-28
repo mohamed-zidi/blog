@@ -1,10 +1,10 @@
 <?php
 include '../traitement_php/profil_traitment.php';
-// echo $_SESSION['mail'];
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,49 +16,55 @@ include '../traitement_php/profil_traitment.php';
 <body>
     <?php include '../header/header.php'; ?>
     <main id="formcenter">
-        <form class="form2" action="../traitement_php/profil_traitment.php" method="post">
-        <?php if(isset($_SESSION['affichage'])){ ?>
-        
-        <p class="affichage-erreur"><?php echo $_SESSION['affichage']; ?></p>
+        <form class="form2" action="" method="post">
+            <h1>Vous etes sur le point de modifier vos informations <?php echo $_SESSION["login"]; ?></h1>
+            <h3 style="color: red;">
+                <? if ($re == true) {
+                    echo  "vos information ont été modifier avec succès";
+                } else {
+                    echo "veuillez réessayer vos modifications";
+                } ?></h3>
+            <table class="form-input">
+                <tr>
+                    <td>
+                        <label>Identifiant</label>
+                        <input type="text" name="newlogin" value='<?php echo $login ?>' />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Email</label>
+                        <input type="text" name="newmail"  value="<?php echo $_SESSION['mail'] ?>"   />
+                    </td>
+                </tr>
+                    <td>
+                        <label>Nouveau mot de passe</label>
+                        <input type="password" name="newpass" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Confirmation nouveau mot de passe</label>
+                        <input type="password" name="newpass2" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <button type="submit" name="modifier">Modifier</button>
 
-        <?php } ?>
-            <div class="modification-form1">
-            <b><label for="newlogin">Entrez votre login:</label></b><br>
-            <input type="text" name="oldlogin" id="oldlogin">
+                    </td>
 
-            <b><label for="newlogin">Entrez votre nouveau login:</label>
-            <input type="text" name="newlogin" id="newlogin">
-            <input type="submit" value="Valider"  name="btn_profil">
-            </div>
-            <div class="modification-form2">
-            <b><label for="newmdp">Entrez votre mot de passe:</label></b>
-            <input type="password" name="oldmdp" id="oldmdp">
-
-            <b><label for="newmdp">Entrez votre nouveau mot de passe:</label></b>
-            <input type="password" name="newmdp" id="newmdp">
-
-            <b><label for="newmdp2">Confirmez votre nouveau mot de passe:</label></b>
-            <input type="password" name="newmdp2" id="newmdp2">
-
-            <input type="submit" value="Valider" name="btn_password">
-            </div>
-            <div class="modification-form3">
-            <b><label for="oldmail">Entrez votre mail:</label></b>
-            <input type="email" name="oldmail" id="oldmail">
-
-            <label for="newmail">Entrez votre nouveau mail:</label>
-            <input type="email" name="newmail" id="newmail">
-
-
-            <input type="submit" value="Valider" name="btn_mail">
-            </div>
-
-
+                </tr>
+            </table>
+                <?php 
+                if(isset($_SESSION['affichage'])){
+                    echo $_SESSION['affichage'];
+                }
+                ?>
         </form>
-
-
     </main>
 
     <?php include("../footer/footer.php"); ?>
 </body>
+
 </html>
